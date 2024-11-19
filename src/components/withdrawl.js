@@ -30,16 +30,6 @@ const WithdrawlHistory = () => {
   return (
     <div className="p-4 pb-28 bg-[#161c2d] min-h-screen text-white">
       <button className="" onClick={() => {navigate(-1)}}> 🔙 </button>
-      {/* <div className="mt-14 bg-slate-700 p-10 px-4 rounded-lg">
-        <input 
-        type="number"
-        placeholder="Enter amount"
-        className="w-full h-10 rounded-full text-center text-black font-bold"
-        />
-        <button class=" border-b-4 border-green-500 mt-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
-           WITHDRAW
-          </button>
-      </div> */}
       <h1 className="text-center text-2xl font-mono mt-14">Withdrawl History</h1>
       <div className="teamTable mx-auto mt-4 text-black w-full">
         <div className="overflow-x-auto bg-gray-600 shadow-lg shadow-white p-2 rounded-lg">
