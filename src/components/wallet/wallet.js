@@ -159,15 +159,15 @@ const WalletDetails = () => {
 
           {/* <!-- Referral Link Input --> */}
           <div class="bg-[#0b1122] border border-gray-600 rounded-md text-white px-4 py-2 mb-4 text-center">
-            https://maticverious.com?ref=0x7D3F380
+            https://bnbkombet.com?ref=0x7D3F380
           </div>
 
           {/* <!-- Buttons --> */}
           <div class="flex flex-col gap-2">
-            <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-md">
+            <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
               COPY REFERRAL LINK
             </button>
-            <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-md">
+            <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
               PROMO MATERIALS
             </button>
           </div>
