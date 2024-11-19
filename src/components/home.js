@@ -77,21 +77,14 @@ const Home = () => {
 
       {/* Main Content */}
       <div
-        className="w-full max-w-md px-4 py-8 rounded-lg text-center space-y-4"
+        className="w-full m-auto max-w-md px-4 py-8 rounded-lg text-center space-y-4"
         style={{
           backgroundImage: `url(require('./images/back_logo.png'))`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        {/* Logo */}
-        {/* <div className="text-4xl font-bold mb-4">M</div> */}
-
-        {/* Navigation */}
-        {/* <div className="flex justify-center space-x-6 text-lg">
-          <a href="#" className="hover:underline">Make deposit</a>
-          <a href="#" className="hover:underline">Wallet statistic</a>
-        </div> */}
+        
 
         {/* Main Heading */}
         <h1 className="text-lg mt-6">RELIABLE INVESTMENTS WITH</h1>
