@@ -108,7 +108,7 @@ const Home = () => {
         {/* Main Heading */}
         <h1 className="text-lg mt-6">RELIABLE INVESTMENTS WITH</h1>
         <div className="flex w-[70%] m-auto  items-center">
-          <img className="w-18 m-auto" src="/images/abc2.png" alt="error" />
+          <img className="w-18 m-auto" src="/images/xyz.png" alt="error" />
         </div>
 
         {/* Promotion Text */}
