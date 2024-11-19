@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Home from './components/home';
 import WalletDetails from './components/wallet/wallet';
+import WalletDeposite from './components/wallet/deposite';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/wallet-details" element={<WalletDetails />} />
+      <Route path="/wallet-deposite" element={<WalletDeposite />} />
       </Routes>
     </div>
   );

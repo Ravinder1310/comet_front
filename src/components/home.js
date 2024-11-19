@@ -91,7 +91,7 @@ const Home = () => {
           <img className="w-[100px] m-auto" src="/images/bnb1.png" alt="error" />
         </div>
         <div className="flex justify-between text-yellow-300 font-semibold">
-           <h1>Make Deposite</h1>
+           <h1 onClick={() => {navigate('/wallet-deposite')}}>Make Deposite</h1>
            <h1 onClick={() => {navigate('/wallet-details')}}>Wallet Statitics</h1>
         </div>
       </div>
