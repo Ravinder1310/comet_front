@@ -13,8 +13,11 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import back_logo from "./images/back_logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init();
@@ -30,7 +33,7 @@ const Home = () => {
       }}
     >
       {/* Sidebar Icons */}
-      <div className="fixed right-0 top-32 flex flex-col space-y-2">
+      <div className="fixed right-0 top-32 z-50 flex flex-col space-y-2">
         <a
           href="#"
           className="text-xl bg-white p-1 rounded-l-full text-blue-500"
@@ -83,6 +86,15 @@ const Home = () => {
       </div>
 
       {/* Main Content */}
+      <div className="bg-purple-600 p-10 py-4">
+      <div className="flex w-[70%] m-auto  items-center">
+          <img className="w-[100px] m-auto" src="/images/bnb1.png" alt="error" />
+        </div>
+        <div className="flex justify-between text-yellow-300 font-semibold">
+           <h1 onClick={() => {navigate('/wallet-details')}}>Make Deposite</h1>
+           <h1>Wallet Statitics</h1>
+        </div>
+      </div>
       <div
         className="w-full m-auto max-w-md px-4 py-8 rounded-lg text-center space-y-4"
         style={{
@@ -109,15 +121,15 @@ const Home = () => {
 
         {/* Features List */}
         <ul className="text-sm space-y-2 mt-4 text-left">
-          <li className="flex items-center">
+          <li className="flex">
             <span className="mr-2">✅</span> Blockchain decentralized and
             anonymous platform
           </li>
-          <li className="flex items-center">
+          <li className="flex">
             <span className="mr-2">✅</span> Totally secure income based on
             Polygon smart-contract
           </li>
-          <li className="flex items-center">
+          <li className="flex">
             <span className="mr-2">✅</span> Smart-contract verified and audited
             by independent company
           </li>
@@ -125,13 +137,13 @@ const Home = () => {
 
         {/* Buttons */}
         <div className="space-y-3 mt-6">
-          <button className="w-full py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700">
+          <button className="w-full py-2 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700">
             REGISTER NOW!
           </button>
           <div className="w-full py-2 text-white font-bold underline">
             Check Current State BNB Kombet smart-contract
           </div>
-          <button className="w-full py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700">
+          <button className="w-full py-2 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700">
             RESCAN
           </button>
           <p>
@@ -198,7 +210,7 @@ const Home = () => {
           {" "}
           Step #1: Sign Up
         </h1>
-        <div data-aos="fade-right" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
+        <div data-aos="fade-left" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -268,7 +280,7 @@ const Home = () => {
         <h1 className="text-center w-[70%] m-auto mt-10 mb-4 text-xl text-gray-400">
           Step #2: Get Polygon earnings
         </h1>
-        <div data-aos="fade-right" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
+        <div data-aos="fade-left" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -402,7 +414,7 @@ const Home = () => {
           Step #4: Get Benifits of Magic Income
         </h1>
 
-        <div data-aos="fade-right" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
+        <div data-aos="fade-left" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -772,10 +784,10 @@ const Home = () => {
         </div>
 
         <div class="space-y-4">
-          <button class="bg-purple-700 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-lg hover:bg-purple-800">
+          <button class="bg-purple-700 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-full hover:bg-purple-800">
             Make Deposit
           </button>
-          <button class="bg-purple-700 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-lg hover:bg-purple-800">
+          <button class="bg-purple-700 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-full hover:bg-purple-800">
             Wallet Statistic
           </button>
         </div>
