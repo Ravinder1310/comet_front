@@ -10,6 +10,7 @@ import F50Income from './components/incomes/f50Income';
 import MagicIncome from './components/incomes/magicIncome';
 import DirectIncome from './components/incomes/directIncome';
 import UplineIncome from './components/incomes/uplineBonus';
+import WithdrawlHistory from './components/withdrawl';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path="/magic-income" element={<MagicIncome />} />
       <Route path="/direct-income" element={<DirectIncome />} />
       <Route path="/upline-income" element={<UplineIncome />} />
+      <Route path="/withdrawl" element={<WithdrawlHistory />} />
       </Routes>
     </div>
   );

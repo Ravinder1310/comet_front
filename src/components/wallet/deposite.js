@@ -76,7 +76,7 @@ const WalletDeposite = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/withdrawl')}} class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -88,7 +88,12 @@ const WalletDeposite = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Request Withdraw:</p>
-          <button class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <input 
+        type="number"
+        placeholder="Enter amount"
+        className="w-full h-10 rounded-full text-center text-black font-bold mt-4"
+        />
+          <button class="mt-4 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             WITHDRAW
           </button>
           <p className="text-gray-400 mt-3 font-sans">
