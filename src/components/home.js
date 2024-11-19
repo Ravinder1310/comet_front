@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaWhatsapp,
   FaYoutube,
@@ -10,9 +10,16 @@ import {
   FaReddit,
   FaTiktok,
 } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import back_logo from "./images/back_logo.png";
 
 const Home = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div
       className=" min-h-screen pb-10 bg-black text-white"
@@ -161,7 +168,7 @@ const Home = () => {
           Nobody can steal funds, or change contract functions.
         </p>
       </div>
-      <div className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
+      <div data-aos="fade-right" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
         <div className="mb-4">
           <h3 className="text-lg font-bold flex items-center">
             Worldwide legal company with professional team
@@ -191,7 +198,7 @@ const Home = () => {
           {" "}
           Step #1: Sign Up
         </h1>
-        <div className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
+        <div data-aos="fade-right" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -225,7 +232,7 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="w-[85%] m-auto mt-10 p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
+        <div data-aos="fade-right" className="w-[85%] m-auto mt-10 p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -261,7 +268,7 @@ const Home = () => {
         <h1 className="text-center w-[70%] m-auto mt-10 mb-4 text-xl text-gray-400">
           Step #2: Get Polygon earnings
         </h1>
-        <div className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
+        <div data-aos="fade-right" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -301,7 +308,7 @@ const Home = () => {
         <h1 className="text-center w-[70%] m-auto mt-10 mb-4 text-xl text-gray-400">
           Step #3: Get Benifits of M50
         </h1>
-        <div className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
+        <div data-aos="fade-right" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -395,7 +402,7 @@ const Home = () => {
           Step #4: Get Benifits of Magic Income
         </h1>
 
-        <div className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
+        <div data-aos="fade-right" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -572,7 +579,7 @@ const Home = () => {
           Step #5: Get Benifits of Pre Launching Bonanza
         </h1>
 
-        <div className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
+        <div data-aos="fade-right" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
