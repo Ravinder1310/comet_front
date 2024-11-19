@@ -1,9 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const WalletDetails = () => {
+
+    const navigate = useNavigate();
+
   return (
     <div class="bg-[#161c2d] text-white p-6 px-3 w-full mx-auto">
       {/* <!-- Header --> */}
+      <button className="" onClick={() => {navigate(-1)}}> 🔙 </button>
       <div class="text-center mb-4 mt-2">
         <h2 class="text-xl font-bold">MAKE NEW DEPOSIT</h2>
         <p class="text-sm text-gray-400 mt-3">
@@ -34,7 +39,7 @@ const WalletDetails = () => {
       </div>
 
       {/* <!-- Deposit Button --> */}
-      <button class="mt-4 w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
+      <button class="mt-4 w-full border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
         DEPOSIT NOW
       </button>
 
@@ -52,7 +57,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button class="mt-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -66,7 +71,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button class="mt-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -78,7 +83,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button class="mt-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -90,7 +95,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button class="mt-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -102,7 +107,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button class="mt-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -114,7 +119,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button class="mt-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -126,7 +131,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button class="mt-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -138,7 +143,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Request Withdraw:</p>
-          <button class="mt-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             WITHDRAW
           </button>
           <p className="text-gray-400 mt-3 font-sans">
@@ -164,10 +169,10 @@ const WalletDetails = () => {
 
           {/* <!-- Buttons --> */}
           <div class="flex flex-col gap-2">
-            <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
+            <button class="w-full border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
               COPY REFERRAL LINK
             </button>
-            <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
+            <button class="w-full border-b-4 border-green-500    bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
               PROMO MATERIALS
             </button>
           </div>

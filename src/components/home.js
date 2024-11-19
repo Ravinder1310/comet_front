@@ -91,8 +91,8 @@ const Home = () => {
           <img className="w-[100px] m-auto" src="/images/bnb1.png" alt="error" />
         </div>
         <div className="flex justify-between text-yellow-300 font-semibold">
-           <h1 onClick={() => {navigate('/wallet-details')}}>Make Deposite</h1>
-           <h1>Wallet Statitics</h1>
+           <h1>Make Deposite</h1>
+           <h1 onClick={() => {navigate('/wallet-details')}}>Wallet Statitics</h1>
         </div>
       </div>
       <div
@@ -137,13 +137,13 @@ const Home = () => {
 
         {/* Buttons */}
         <div className="space-y-3 mt-6">
-          <button className="w-full py-2 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700">
+          <button className="w-full py-2 border-b-4 border-green-500 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700">
             REGISTER NOW!
           </button>
           <div className="w-full py-2 text-white font-bold underline">
             Check Current State BNB Kombet smart-contract
           </div>
-          <button className="w-full py-2 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700">
+          <button className="w-full py-2 border-b-4 border-green-500 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700">
             RESCAN
           </button>
           <p>
@@ -180,7 +180,7 @@ const Home = () => {
           Nobody can steal funds, or change contract functions.
         </p>
       </div>
-      <div data-aos="fade-right" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
+      <div data-aos="flip-right" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
         <div className="mb-4">
           <h3 className="text-lg font-bold flex items-center">
             Worldwide legal company with professional team
@@ -210,7 +210,7 @@ const Home = () => {
           {" "}
           Step #1: Sign Up
         </h1>
-        <div data-aos="fade-left" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-left" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -239,12 +239,12 @@ const Home = () => {
             <span className="font-semibold">MetaMask</span> browser extensions.
             You can get Polygon coins via popular exchangers.
           </p>
-          <button className="w-full py-2 mt-4 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
+          <button className="w-full py-2 mt-4 border-b-4 border-green-500 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
             HOW TO GET POLYGON
           </button>
         </div>
 
-        <div data-aos="fade-right" className="w-[85%] m-auto mt-10 p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-right" className="w-[85%] m-auto mt-10 p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -273,14 +273,14 @@ const Home = () => {
             is the 3D blockchain that is changing the way you interact with
             crypto.
           </p>
-          <button className="w-full py-2 mt-4 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
+          <button className="w-full py-2 mt-4 border-b-4 border-green-500 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
             SIGN UP NOW
           </button>
         </div>
         <h1 className="text-center w-[70%] m-auto mt-10 mb-4 text-xl text-gray-400">
           Step #2: Get Polygon earnings
         </h1>
-        <div data-aos="fade-left" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-left" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -313,14 +313,14 @@ const Home = () => {
             Direct team's Reward: You will get benifit of 1 Polygon from every
             level up to 11 Levels Self - 10 Polygon Each Level = 1 Polygon
           </p>
-          <button className="w-full py-2 mt-4 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
+          <button className="w-full py-2 border-b-4 border-green-500 mt-4 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
             YOUR WALLET STATISTICS
           </button>
         </div>
         <h1 className="text-center w-[70%] m-auto mt-10 mb-4 text-xl text-gray-400">
           Step #3: Get Benifits of M50
         </h1>
-        <div data-aos="fade-right" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-right" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -414,7 +414,7 @@ const Home = () => {
           Step #4: Get Benifits of Magic Income
         </h1>
 
-        <div data-aos="fade-left" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-left" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -591,7 +591,7 @@ const Home = () => {
           Step #5: Get Benifits of Pre Launching Bonanza
         </h1>
 
-        <div data-aos="fade-right" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-right" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -784,10 +784,10 @@ const Home = () => {
         </div>
 
         <div class="space-y-4">
-          <button class="bg-purple-700 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-full hover:bg-purple-800">
+          <button class="bg-purple-700 border-b-4 border-green-500 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-full hover:bg-purple-800">
             Make Deposit
           </button>
-          <button class="bg-purple-700 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-full hover:bg-purple-800">
+          <button class="bg-purple-700 border-b-4 border-green-500 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-full hover:bg-purple-800">
             Wallet Statistic
           </button>
         </div>
