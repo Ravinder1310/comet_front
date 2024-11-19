@@ -25,7 +25,7 @@ const WalletDetails = () => {
             <span className="text-gray-300 font-bold mr-2">🔗</span>
             <p className="text-sm break-all">
               <a
-                href={referralLink}
+                href={referralLink} 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-purple-400 underline"
@@ -36,7 +36,7 @@ const WalletDetails = () => {
           </div>
         </div>
         <p className="text-sm text-gray-400 text-center">
-          Share this link with your partners to get free Polygon
+          Share this link with your partners to get free BNB Kombat
         </p>
       </div>
 

@@ -113,7 +113,7 @@ const Home = () => {
 
         {/* Promotion Text */}
         <p className="text-[12px] w-[75%] m-auto font-semibold mt-4 leading-5">
-          GET FREE 10 POLYGON REWARDS BY FREE REGISTRATION AND ALSO GET BENEFIT
+          GET FREE 10 BNB Kombat REWARDS BY FREE REGISTRATION AND ALSO GET BENEFIT
           FREE REFERRAL PROGRAM UP TO 11 LEVELS
         </p>
 
@@ -127,7 +127,7 @@ const Home = () => {
           </li>
           <li className="flex">
             <span className="mr-2">✅</span> Totally secure income based on
-            Polygon smart-contract
+            BNB Kombat smart-contract
           </li>
           <li className="flex">
             <span className="mr-2">✅</span> Smart-contract verified and audited
@@ -170,7 +170,7 @@ const Home = () => {
             </a>
           </li>
           <li class="text-sm">
-            Reliability of Polygon smart-contract. <br />
+            Reliability of BNB Kombat smart-contract. <br />
             <span class="font-semibold">Scam is impossible!</span>
           </li>
         </ul>
@@ -214,7 +214,7 @@ const Home = () => {
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
-                {/* Polygon Icon - Replace with an actual icon if available */}
+                {/* BNB Kombat Icon - Replace with an actual icon if available */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -230,17 +230,17 @@ const Home = () => {
                   />
                 </svg>
               </span>
-              GET (POLYGON)
+              GET (BNB Kombat)
             </h3>
           </div>
           <p className="text-sm mb-4">
             We recommend to use:{" "}
             <span className="font-semibold">Token Pocket</span> /{" "}
             <span className="font-semibold">MetaMask</span> browser extensions.
-            You can get Polygon coins via popular exchangers.
+            You can get BNB Kombat coins via popular exchangers.
           </p>
           <button className="w-full py-2 mt-4 border-b-4 border-green-500 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
-            HOW TO GET POLYGON
+            HOW TO GET BNB Kombat
           </button>
         </div>
 
@@ -248,7 +248,7 @@ const Home = () => {
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
-                {/* Polygon Icon - Replace with an actual icon if available */}
+                {/* BNB Kombat Icon - Replace with an actual icon if available */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -264,12 +264,12 @@ const Home = () => {
                   />
                 </svg>
               </span>
-              MUST HAVE SOME POLYGON FOR FEE
+              MUST HAVE SOME BNB Kombat FOR FEE
             </h3>
           </div>
           <p className="text-sm mb-4">
             Empowering users through decentralized design, distribution, and
-            direction. <span className="font-semibold">#Polygon</span>
+            direction. <span className="font-semibold">#BNB Kombat</span>
             is the 3D blockchain that is changing the way you interact with
             crypto.
           </p>
@@ -278,13 +278,13 @@ const Home = () => {
           </button>
         </div>
         <h1 className="text-center w-[70%] m-auto mt-10 mb-4 text-xl text-gray-400">
-          Step #2: Get Polygon earnings
+          Step #2: Get BNB Kombat earnings
         </h1>
         <div data-aos="flip-left" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
-                {/* Polygon Icon - Replace with an actual icon if available */}
+                {/* BNB Kombat Icon - Replace with an actual icon if available */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -300,18 +300,18 @@ const Home = () => {
                   />
                 </svg>
               </span>
-              GET YOUR POLYGON EVERY MOMENT
+              GET YOUR BNB Kombat EVERY MOMENT
             </h3>
           </div>
           <p className="text-sm mb-4">
-            Free Refferal Polygon Rewards Programme . Get free 10 Polygon Coin
+            Free Refferal BNB Kombat Rewards Programme . Get free 10 BNB Kombat Coin
             Reward just by free ragistration and also get benifit free refferal
             program up to 11 Levels
             <span className="font-semibold">
               Additional earnings with this program:
             </span>{" "}
-            Direct team's Reward: You will get benifit of 1 Polygon from every
-            level up to 11 Levels Self - 10 Polygon Each Level = 1 Polygon
+            Direct team's Reward: You will get benifit of 1 BNB Kombat from every
+            level up to 11 Levels Self - 10 BNB Kombat Each Level = 1 BNB Kombat
           </p>
           <button className="w-full py-2 border-b-4 border-green-500 mt-4 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
             YOUR WALLET STATISTICS
@@ -779,7 +779,7 @@ const Home = () => {
         <div class="text-sm mb-6">
           <p>
             Powered by{" "}
-            <span class="text-purple-400 font-bold">⚛ Polygon blockchain</span>
+            <span class="text-purple-400 font-bold">⚛ BNB Kombat blockchain</span>
           </p>
         </div>
 
