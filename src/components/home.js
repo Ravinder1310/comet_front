@@ -6,7 +6,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaTwitter,
-  FaGlobe,
+  FaGlobe,  
   FaReddit,
   FaTiktok,
 } from "react-icons/fa";
@@ -14,6 +14,8 @@ import AOS from "aos";
 import { motion } from "framer-motion";
 import "aos/dist/aos.css";
 import back_logo from "./images/back_logo.png";
+import Register from "./Register/Register";
+import Login from "./Login/Login";
 import { useNavigate } from "react-router-dom";
 
 const AnimatedBorderBox = ({ children }) => (
@@ -54,7 +56,7 @@ const Home = () => {
       }}
     >
       {/* Sidebar Icons */}
-      <div className="fixed right-0 top-32 z-50 flex flex-col space-y-2">
+      <div className="fixed right-0 top-44 z-50 flex flex-col space-y-2">
         <a
           href="#"
           className="text-xl bg-white p-1 rounded-l-full text-blue-500"
@@ -108,32 +110,31 @@ const Home = () => {
 
       {/* Main Content */}
       <div className="bg-yellow-500 p-10 py-4 fixed top-0 w-full z-50 backdrop-blur-md bg-opacity-50">
-  {/* Logo Section */}
-  <div className="flex w-[70%] m-auto items-center">
-    <img className="w-[100px] m-auto" src="/images/bnb1.png" alt="Logo" />
-  </div>
+        {/* Logo Section */}
+        <div className="flex w-[70%] m-auto items-center">
+          <img className="w-[100px] m-auto" src="/images/bnb1.png" alt="Logo" />
+        </div>
 
-  {/* Action Buttons */}
-  <div className="flex justify-between text-white font-semibold mt-2">
-    <h1
-      className="cursor-pointer hover:underline"
-      onClick={() => {
-        navigate("/wallet-deposite");
-      }}
-    >
-      Make Deposit
-    </h1>
-    <h1
-      className="cursor-pointer hover:underline"
-      onClick={() => {
-        navigate("/wallet-details");
-      }}
-    >
-      Wallet Statistics
-    </h1>
-  </div>
-</div>
-
+        {/* Action Buttons */}
+        <div className="flex justify-between text-white font-semibold mt-2">
+          <h1
+            className="cursor-pointer hover:underline"
+            onClick={() => {
+              navigate("/wallet-deposite");
+            }}
+          >
+            Make Deposit
+          </h1>
+          <h1
+            className="cursor-pointer hover:underline"
+            onClick={() => {
+              navigate("/wallet-details");
+            }}
+          >
+            Wallet Statistics
+          </h1>
+        </div>
+      </div>
 
       <div
         className="w-full m-auto max-w-md px-4  py-8 pt-36 rounded-lg text-center space-y-4"
@@ -150,7 +151,7 @@ const Home = () => {
         </div>
 
         {/* Promotion Text */}
-        <p className="text-[12px] w-[75%] m-auto font-semibold mt-4 leading-5">
+        <p className="text-[12px] w-[75%] m-auto font-semibold mt-4 leading-5 text-white">
           GET FREE 10 BNB Kombat REWARDS BY FREE REGISTRATION AND ALSO GET
           BENEFIT FREE REFERRAL PROGRAM UP TO 11 LEVELS
         </p>
@@ -175,16 +176,16 @@ const Home = () => {
 
         {/* Buttons */}
         <div className="space-y-3 mt-6">
-          <button className="w-full py-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white rounded-full font-semibold">
-            REGISTER NOW!
-          </button>
+          {/* <Register /> */}
+          {/* <Login /> */}
+
           <div className="w-full py-2 text-white font-bold underline">
             Check Current State BNB Kombet smart-contract
           </div>
           <button className="w-full py-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white rounded-full font-semibold">
             RESCAN
           </button>
-          <p>
+          <p className="text-white">
             If matic is deducted and id not registered, PLEASE DONT MAKE THE
             PAYMENT AGAIN and rescan you transaction Here
           </p>
@@ -212,7 +213,7 @@ const Home = () => {
             <span class="font-semibold">Scam is impossible!</span>
           </li>
         </ul>
-        <p class="text-sm mt-6">
+        <p class="text-sm mt-6 text-white">
           Smart-contract technology ensures full safety of all participants'
           funds. <br />
           Nobody can steal funds, or change contract functions.
@@ -224,22 +225,22 @@ const Home = () => {
           className="w-full m-auto p-5 bg-gradient-to-r from-yellow-500 via-yellow-600  to-yellow-600 text-black rounded-lg shadow-lg"
         >
           <div className="mb-4">
-            <h3 className="text-lg font-bold flex items-center">
+            <h3 className="text-lg text-left font-bold flex items-center">
               Worldwide legal company with professional team
             </h3>
           </div>
-          <p className="text-sm">
+          <p className="text-sm text-left">
             We are the officially registered company with team of trusted
             professionals on blockchain market. We are working 24/7 to increase
             platform popularity and make it truly worldwide.
           </p>
-          <p className="font-semibold">Join us and get your profit!</p>{" "}
+          <p className="font-semibold text-left">Join us and get your profit!</p>{" "}
         </div>
       </AnimatedBorderBox>
 
       <hr className="border-t-2 mt-10 border-dashed w-[90%] m-auto" />
       <div className="mt-6 w-[80%] m-auto text-center">
-        <p className="text-[29px] font-semibold leading-8">
+        <p className="text-[29px] font-semibold leading-8 text-white">
           HOW TO WORK WITH PLATFORM
         </p>
 
@@ -280,7 +281,7 @@ const Home = () => {
                 GET (BNB Kombat)
               </h3>
             </div>
-            <p className="text-sm mb-4">
+            <p className="text-sm mb-4 text-left">
               We recommend to use:{" "}
               <span className="font-semibold">Token Pocket</span> /{" "}
               <span className="font-semibold">MetaMask</span> browser
@@ -319,7 +320,7 @@ const Home = () => {
                 MUST HAVE SOME BNB Kombat FOR FEE
               </h3>
             </div>
-            <p className="text-sm mb-4">
+            <p className="text-sm mb-4 text-left">
               Empowering users through decentralized design, distribution, and
               direction. <span className="font-semibold">#BNB Kombat</span>
               is the 3D blockchain that is changing the way you interact with
@@ -361,7 +362,7 @@ const Home = () => {
                 GET YOUR BNB Kombat EVERY MOMENT
               </h3>
             </div>
-            <p className="text-sm mb-4">
+            <p className="text-sm mb-4 text-left">
               Free Refferal BNB Kombat Rewards Programme . Get free 10 BNB
               Kombat Coin Reward just by free ragistration and also get benifit
               free refferal program up to 11 Levels
@@ -413,7 +414,7 @@ const Home = () => {
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -424,7 +425,7 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>
+                <p className=" text-left mt-0">
                   Get a Huge Team in{" "}
                   <span className="font-semibold">M50 Program</span>
                 </p>
@@ -434,7 +435,7 @@ const Home = () => {
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -445,7 +446,7 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>
+                <p className="text-left mt-0">
                   M50 Program is Designed and Developed by a Unique and Smart
                   Way from which You will get a Huge Team
                 </p>
@@ -455,7 +456,7 @@ const Home = () => {
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -466,7 +467,7 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>
+                <p className="text-left mt-0">
                   You will Receive again and again Earnings from the Team up to{" "}
                   <span className="font-semibold">3.33% Daily</span> of your
                   investment
@@ -512,7 +513,7 @@ const Home = () => {
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -523,7 +524,7 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>
+                <p className=" text-left mt-0">
                   Magic Income will be distributed Weekly Basis according of
                   your front Business Legs.
                 </p>
@@ -533,7 +534,7 @@ const Home = () => {
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -544,14 +545,14 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>From first leg 0%</p>
+                <p className=" text-left mt-0">From first leg 0%</p>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -562,14 +563,14 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>From second leg 5%</p>
+                <p className=" text-left mt-0">From second leg 5%</p>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -580,14 +581,14 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>From third leg 10%</p>
+                <p className=" text-left mt-0">From third leg 10%</p>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -598,14 +599,14 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>From 4th leg 15%</p>
+                <p className=" text-left mt-0">From 4th leg 15%</p>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -616,14 +617,14 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>From 5th and above Legs 20%.</p>
+                <p className=" text-left mt-0">From 5th and above Legs 20%.</p>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -634,14 +635,14 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>There is no caping in magic income.</p>
+                <p className=" text-left mt-0">There is no caping in magic income.</p>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -652,7 +653,7 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>It will be distributed up to unlimited Depth of Levels.</p>
+                <p className=" text-left mt-0">It will be distributed up to unlimited Depth of Levels.</p>
               </li>
             </ul>
           </div>
@@ -693,7 +694,7 @@ const Home = () => {
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -704,7 +705,7 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>
+                <p className=" text-left mt-0">
                   Get 100% Direct income from your Active Direct's Upgraded
                   Package.
                 </p>
@@ -714,7 +715,7 @@ const Home = () => {
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -725,14 +726,14 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>Offer valid for 30 days from your TOP-UP Day.</p>
+                <p className=" text-left mt-0">Offer valid for 30 days from your TOP-UP Day.</p>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -743,7 +744,7 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>
+                <p className=" text-left mt-0">
                   1 month from ID activation date. 100% direct sponsor income
                   will be received..
                 </p>
@@ -753,7 +754,7 @@ const Home = () => {
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -764,7 +765,7 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>
+                <p className=" text-left mt-0">
                   40% direct sponsor income will be received in the 2nd month
                   from ID activation date.
                 </p>
@@ -774,7 +775,7 @@ const Home = () => {
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -785,7 +786,7 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>
+                <p className=" text-left mt-0">
                   30% direct sponsor income will be received in the 3rd month
                   from ID activation date.
                 </p>
@@ -795,7 +796,7 @@ const Home = () => {
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -806,7 +807,7 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>
+                <p className=" text-left mt-0">
                   20% direct sponsor income will be received in the 4th month
                   from ID activation date.
                 </p>
@@ -816,7 +817,7 @@ const Home = () => {
                   {/* Checkmark Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-green-400"
+                    className="h-5 w-5 text-purple-600"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -827,7 +828,7 @@ const Home = () => {
                     />
                   </svg>
                 </span>
-                <p>
+                <p className=" text-left mt-0">
                   10% direct sponsor income will be received in the 5th month
                   from ID activation date.
                 </p>
@@ -838,8 +839,8 @@ const Home = () => {
       </div>
       <div class=" text-white py-8 px-8 mt-10 w-full sm:w-96 mx-auto">
         <div class="text-sm">
-          <p>Copyrights:</p>
-          <p>
+          <p className="text-white text-left">Copyrights:</p>
+          <p className="text-white text-left">
             BNB Kombet LTD |{" "}
             <a
               href="https://bnbkombat.live"
@@ -848,13 +849,13 @@ const Home = () => {
               https://bnbkombat.live
             </a>
           </p>
-          <p>Blockchain investment platform</p>
-          <p>2024 © All Rights Reserved</p>
-          <p>Smart-contract address: #</p>
+          <p className="text-white text-left">Blockchain investment platform</p>
+          <p className="text-white text-left">2024 © All Rights Reserved</p>
+          <p className="text-white text-left">Smart-contract address: #</p>
         </div>
 
-        <div class="text-sm mb-6">
-          <p>
+        <div className="text-sm mb-6 ">
+          <p className="text-white text-left">
             Powered by{" "}
             <span class="text-yellow-400 font-bold">
               {" "}

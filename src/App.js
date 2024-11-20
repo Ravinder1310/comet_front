@@ -27,6 +27,7 @@ function App() {
       <Route path="/upline-income" element={<UplineIncome />} />
       <Route path="/withdrawl" element={<WithdrawlHistory />} />
       <Route path="/recharge" element={<RechargeHistory />} />
+      <Route path="/:referral" element={<Home />} />
       </Routes>
     </div>
   );

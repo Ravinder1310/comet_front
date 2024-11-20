@@ -50,7 +50,7 @@ const WalletDeposite = () => {
       <div class="space-y-6">
         {/* <!-- Split Wallet --> */}
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
-          <p class="text-sm font-semibold">My Investment:</p>
+          <p class="text-sm font-semibold text-left text-white">My Investment:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>
@@ -69,7 +69,7 @@ const WalletDeposite = () => {
         {/* <!-- Left Free POL --> */}
       
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
-          <p class="text-sm font-semibold">Total Withdrawl:</p>
+          <p class="text-sm font-semibold text-left text-white">Total Withdrawl:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>
@@ -81,7 +81,7 @@ const WalletDeposite = () => {
           </button>
         </div>
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
-          <p class="text-sm font-semibold">Balance:</p>
+          <p class="text-sm font-semibold text-left text-white">Balance:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>

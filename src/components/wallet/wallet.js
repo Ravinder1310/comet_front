@@ -18,7 +18,7 @@ const WalletDetails = () => {
         </h2>
         <div className="flex items-center justify-center bg-gray-900 rounded-lg p-3 mb-4">
           <span className="text-yellow-500 font-bold mr-2">⚡</span>
-          <p className="text-sm truncate">{walletAddress}</p>
+          <p className="text-sm truncate text-white font-semibold">{walletAddress}</p>
         </div>
         <div className="bg-gray-900 rounded-lg p-3 mb-4">
           <div className="flex items-center justify-center">
@@ -48,8 +48,8 @@ const WalletDetails = () => {
         {/* <!-- Split Wallet --> */}
         
 
-        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
-          <p class="text-sm font-semibold">Total Income:</p>
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500 text-left text-white">
+          <p class="text-sm font-semibold text-left text-white">Total Income:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>
@@ -57,7 +57,7 @@ const WalletDetails = () => {
         </div>
 
         <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
-          <p class="text-sm font-semibold">Direct Business:</p>
+          <p class="text-sm font-semibold text-left text-white">Direct Business:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>
@@ -67,7 +67,7 @@ const WalletDetails = () => {
 
 
         <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
-          <p class="text-sm font-semibold">Team Business:</p>
+          <p class="text-sm font-semibold text-left text-white">Team Business:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>
@@ -75,7 +75,7 @@ const WalletDetails = () => {
         </div>
 
         <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
-          <p class="text-sm font-semibold">My Team:</p>
+          <p class="text-sm font-semibold text-left text-white">My Team:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>
@@ -93,7 +93,7 @@ const WalletDetails = () => {
 
         {/* <!-- Left Free POL --> */}
         <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
-          <p class="text-sm font-semibold">Free Airdrop Income:</p>
+          <p class="text-sm font-semibold text-left text-white">Free Airdrop Income:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>
@@ -105,7 +105,7 @@ const WalletDetails = () => {
           </button>
         </div>
         <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
-          <p class="text-sm font-semibold">F50 Program Income:</p>
+          <p class="text-sm font-semibold text-left text-white">F50 Program Income:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>
@@ -117,7 +117,7 @@ const WalletDetails = () => {
           </button>
         </div>
         <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
-          <p class="text-sm font-semibold">Magic Income:</p>
+          <p class="text-sm font-semibold text-left text-white">Magic Income:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>
@@ -129,7 +129,7 @@ const WalletDetails = () => {
           </button>
         </div>
         <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
-          <p class="text-sm font-semibold">Direct Income:</p>
+          <p class="text-sm font-semibold text-left text-white">Direct Income:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>
@@ -141,7 +141,7 @@ const WalletDetails = () => {
           </button>
         </div>
         <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
-          <p class="text-sm font-semibold">Upline Bonus:</p>
+          <p class="text-sm font-semibold text-left text-white">Upline Bonus:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
             <p className="text-yellow-500 font-bold text-2xl">0</p>
