@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaWhatsapp,
   FaYoutube,
@@ -10,11 +10,22 @@ import {
   FaReddit,
   FaTiktok,
 } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import back_logo from "./images/back_logo.png";
 import Register from "./Register/Register";
 import Login from "./Login/Login";
+import { useNavigate } from "react-router-dom";
+
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div
       className=" min-h-screen pb-10 bg-black text-white"
@@ -25,7 +36,7 @@ const Home = () => {
       }}
     >
       {/* Sidebar Icons */}
-      <div className="fixed right-0 top-32 flex flex-col space-y-2">
+      <div className="fixed right-0 top-32 z-50 flex flex-col space-y-2">
         <a
           href="#"
           className="text-xl bg-white p-1 rounded-l-full text-blue-500"
@@ -78,6 +89,15 @@ const Home = () => {
       </div>
 
       {/* Main Content */}
+      <div className="bg-purple-600 p-10 py-4">
+      <div className="flex w-[70%] m-auto  items-center">
+          <img className="w-[100px] m-auto" src="/images/bnb1.png" alt="error" />
+        </div>
+        <div className="flex justify-between text-yellow-300 font-semibold">
+           <h1 onClick={() => {navigate('/wallet-deposite')}}>Make Deposite</h1>
+           <h1 onClick={() => {navigate('/wallet-details')}}>Wallet Statitics</h1>
+        </div>
+      </div>
       <div
         className="w-full m-auto max-w-md px-4 py-8 rounded-lg text-center space-y-4"
         style={{
@@ -91,12 +111,12 @@ const Home = () => {
         {/* Main Heading */}
         <h1 className="text-lg mt-6">RELIABLE INVESTMENTS WITH</h1>
         <div className="flex w-[70%] m-auto  items-center">
-          <img className="w-18 m-auto" src="/images/abc2.png" alt="error" />
+          <img className="w-18 m-auto" src="/images/xyz.png" alt="error" />
         </div>
 
         {/* Promotion Text */}
         <p className="text-[12px] w-[75%] m-auto font-semibold mt-4 leading-5">
-          GET FREE 10 POLYGON REWARDS BY FREE REGISTRATION AND ALSO GET BENEFIT
+          GET FREE 10 BNB Kombat REWARDS BY FREE REGISTRATION AND ALSO GET BENEFIT
           FREE REFERRAL PROGRAM UP TO 11 LEVELS
         </p>
 
@@ -104,15 +124,15 @@ const Home = () => {
 
         {/* Features List */}
         <ul className="text-sm space-y-2 mt-4 text-left">
-          <li className="flex items-center">
+          <li className="flex">
             <span className="mr-2">✅</span> Blockchain decentralized and
             anonymous platform
           </li>
-          <li className="flex items-center">
+          <li className="flex">
             <span className="mr-2">✅</span> Totally secure income based on
-            Polygon smart-contract
+            BNB Kombat smart-contract
           </li>
-          <li className="flex items-center">
+          <li className="flex">
             <span className="mr-2">✅</span> Smart-contract verified and audited
             by independent company
           </li>
@@ -129,7 +149,7 @@ const Home = () => {
           <div className="w-full py-2 text-white font-bold underline">
             Check Current State BNB Kombet smart-contract
           </div>
-          <button className="w-full py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700">
+          <button className="w-full py-2 border-b-4 border-green-500 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700">
             RESCAN
           </button>
           <p>
@@ -156,7 +176,7 @@ const Home = () => {
             </a>
           </li>
           <li class="text-sm">
-            Reliability of Polygon smart-contract. <br />
+            Reliability of BNB Kombat smart-contract. <br />
             <span class="font-semibold">Scam is impossible!</span>
           </li>
         </ul>
@@ -166,7 +186,7 @@ const Home = () => {
           Nobody can steal funds, or change contract functions.
         </p>
       </div>
-      <div className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
+      <div data-aos="flip-right" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
         <div className="mb-4">
           <h3 className="text-lg font-bold flex items-center">
             Worldwide legal company with professional team
@@ -196,11 +216,11 @@ const Home = () => {
           {" "}
           Step #1: Sign Up
         </h1>
-        <div className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-left" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600  to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
-                {/* Polygon Icon - Replace with an actual icon if available */}
+                {/* BNB Kombat Icon - Replace with an actual icon if available */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -216,25 +236,25 @@ const Home = () => {
                   />
                 </svg>
               </span>
-              GET (POLYGON)
+              GET (BNB Kombat)
             </h3>
           </div>
           <p className="text-sm mb-4">
             We recommend to use:{" "}
             <span className="font-semibold">Token Pocket</span> /{" "}
             <span className="font-semibold">MetaMask</span> browser extensions.
-            You can get Polygon coins via popular exchangers.
+            You can get BNB Kombat coins via popular exchangers.
           </p>
-          <button className="w-full py-2 mt-4 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
-            HOW TO GET POLYGON
+          <button className="w-full py-2 mt-4 border-b-4 border-green-500 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
+            HOW TO GET BNB Kombat
           </button>
         </div>
 
-        <div className="w-[85%] m-auto mt-10 p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-right" className="w-[85%] m-auto mt-10 p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
-                {/* Polygon Icon - Replace with an actual icon if available */}
+                {/* BNB Kombat Icon - Replace with an actual icon if available */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -250,27 +270,27 @@ const Home = () => {
                   />
                 </svg>
               </span>
-              MUST HAVE SOME POLYGON FOR FEE
+              MUST HAVE SOME BNB Kombat FOR FEE
             </h3>
           </div>
           <p className="text-sm mb-4">
             Empowering users through decentralized design, distribution, and
-            direction. <span className="font-semibold">#Polygon</span>
+            direction. <span className="font-semibold">#BNB Kombat</span>
             is the 3D blockchain that is changing the way you interact with
             crypto.
           </p>
-          <button className="w-full py-2 mt-4 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
+          <button className="w-full py-2 mt-4 border-b-4 border-green-500 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
             SIGN UP NOW
           </button>
         </div>
         <h1 className="text-center w-[70%] m-auto mt-10 mb-4 text-xl text-gray-400">
-          Step #2: Get Polygon earnings
+          Step #2: Get BNB Kombat earnings
         </h1>
-        <div className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-left" className="w-[85%] m-auto p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-800 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
-                {/* Polygon Icon - Replace with an actual icon if available */}
+                {/* BNB Kombat Icon - Replace with an actual icon if available */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -286,27 +306,27 @@ const Home = () => {
                   />
                 </svg>
               </span>
-              GET YOUR POLYGON EVERY MOMENT
+              GET YOUR BNB Kombat EVERY MOMENT
             </h3>
           </div>
           <p className="text-sm mb-4">
-            Free Refferal Polygon Rewards Programme . Get free 10 Polygon Coin
+            Free Refferal BNB Kombat Rewards Programme . Get free 10 BNB Kombat Coin
             Reward just by free ragistration and also get benifit free refferal
             program up to 11 Levels
             <span className="font-semibold">
               Additional earnings with this program:
             </span>{" "}
-            Direct team's Reward: You will get benifit of 1 Polygon from every
-            level up to 11 Levels Self - 10 Polygon Each Level = 1 Polygon
+            Direct team's Reward: You will get benifit of 1 BNB Kombat from every
+            level up to 11 Levels Self - 10 BNB Kombat Each Level = 1 BNB Kombat
           </p>
-          <button className="w-full py-2 mt-4 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
+          <button className="w-full py-2 border-b-4 border-green-500 mt-4 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-full shadow-md transition duration-300">
             YOUR WALLET STATISTICS
           </button>
         </div>
         <h1 className="text-center w-[70%] m-auto mt-10 mb-4 text-xl text-gray-400">
           Step #3: Get Benifits of M50
         </h1>
-        <div className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-right" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -400,7 +420,7 @@ const Home = () => {
           Step #4: Get Benifits of Magic Income
         </h1>
 
-        <div className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-left" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -577,7 +597,7 @@ const Home = () => {
           Step #5: Get Benifits of Pre Launching Bonanza
         </h1>
 
-        <div className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
+        <div data-aos="flip-right" className="w-[85%] m-auto max-w-xl p-5 bg-gradient-to-r from-gray-800 via-gray-600 to-purple-600 text-white rounded-lg shadow-lg">
           <div className="mb-4">
             <h3 className="text-lg font-bold flex items-center">
               <span className="mr-2">
@@ -765,15 +785,15 @@ const Home = () => {
         <div class="text-sm mb-6">
           <p>
             Powered by{" "}
-            <span class="text-purple-400 font-bold">⚛ Polygon blockchain</span>
+            <span class="text-purple-400 font-bold">⚛ BNB Kombat blockchain</span>
           </p>
         </div>
 
         <div class="space-y-4">
-          <button class="bg-purple-700 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-lg hover:bg-purple-800">
+          <button class="bg-purple-700 border-b-4 border-green-500 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-full hover:bg-purple-800">
             Make Deposit
           </button>
-          <button class="bg-purple-700 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-lg hover:bg-purple-800">
+          <button class="bg-purple-700 border-b-4 border-green-500 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-full hover:bg-purple-800">
             Wallet Statistic
           </button>
         </div>
