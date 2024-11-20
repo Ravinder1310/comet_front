@@ -137,7 +137,7 @@ const Home = () => {
       </div>
 
       <div
-        className="w-full m-auto max-w-md px-4  py-8 pt-36 rounded-lg text-center space-y-4"
+        className="w-full m-auto max-w-md px-4  py-8 pt-44 rounded-lg text-center space-y-4"
         style={{
           backgroundImage: `url(require('./images/back_logo.png'))`,
           backgroundSize: "cover",
@@ -145,7 +145,7 @@ const Home = () => {
         }}
       >
         {/* Main Heading */}
-        <h1 className="text-lg mt-6">RELIABLE INVESTMENTS WITH</h1>
+        <h1 className="text-lg mt-8">RELIABLE INVESTMENTS WITH</h1>
         <div className="flex w-[70%] m-auto  items-center">
           <img className="w-18 m-auto" src="/images/xyz.png" alt="error" />
         </div>
@@ -373,7 +373,11 @@ const Home = () => {
               every level up to 11 Levels Self - 10 BNB Kombat Each Level = 1
               BNB Kombat
             </p>
-            <button className="w-full py-2 border-b-4  mt-4 border-red-500 bg-black hover:bg-gray-700 text-white rounded-full font-semibold shadow-md transition duration-300">
+            <button
+            onClick={() => {
+              navigate("/wallet-details");
+            }}
+            className="w-full py-2 border-b-4  mt-4 border-red-500 bg-black hover:bg-gray-700 text-white rounded-full font-semibold shadow-md transition duration-300">
               YOUR WALLET STATISTICS
             </button>
           </div>
@@ -865,10 +869,18 @@ const Home = () => {
         </div>
 
         <div class="space-y-4">
-          <button class="bg-yellow-600 hover:bg-yellow-700  border-b-4 border-green-500 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-full ">
+          <button
+          onClick={() => {
+            navigate("/wallet-deposite");
+          }}
+          class="bg-yellow-600 hover:bg-yellow-700  border-b-4 border-green-500 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-full ">
             Make Deposit
           </button>
-          <button class="bg-yellow-600 hover:bg-yellow-700 text-white rounded-full font-semibold border-b-4 border-green-500 w-full  uppercase text-lg py-2 px-6 ">
+          <button
+          onClick={() => {
+            navigate("/wallet-details");
+          }}
+          class="bg-yellow-600 hover:bg-yellow-700 text-white rounded-full font-semibold border-b-4 border-green-500 w-full  uppercase text-lg py-2 px-6 ">
             Wallet Statistic
           </button>
         </div>
