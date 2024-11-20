@@ -52,7 +52,7 @@ const WalletDeposite = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">My Investment:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
@@ -71,7 +71,7 @@ const WalletDeposite = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">Total Withdrawl:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
@@ -83,7 +83,7 @@ const WalletDeposite = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">Balance:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />

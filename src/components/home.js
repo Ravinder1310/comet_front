@@ -15,6 +15,7 @@ import "aos/dist/aos.css";
 import back_logo from "./images/back_logo.png";
 import { useNavigate } from "react-router-dom";
 
+
 const Home = () => {
 
   const navigate = useNavigate();

@@ -51,7 +51,7 @@ const WalletDetails = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">Total Income:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
         </div>
@@ -59,7 +59,7 @@ const WalletDetails = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">Direct Business:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
         </div>
@@ -69,7 +69,7 @@ const WalletDetails = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">Team Business:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
         </div>
@@ -77,7 +77,7 @@ const WalletDetails = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">My Team:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
@@ -95,7 +95,7 @@ const WalletDetails = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">Free Airdrop Income:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
@@ -107,7 +107,7 @@ const WalletDetails = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">F50 Program Income:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
@@ -119,7 +119,7 @@ const WalletDetails = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">Magic Income:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
@@ -131,7 +131,7 @@ const WalletDetails = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">Direct Income:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
@@ -143,7 +143,7 @@ const WalletDetails = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">Upline Bonus:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-8" alt="error" />
+            <img src="/images/pl.png" className="w-10" alt="error" />
             <p className="text-purple-600 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
