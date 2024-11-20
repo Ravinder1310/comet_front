@@ -6,7 +6,7 @@ const WalletDetails = () => {
     const navigate = useNavigate();
     const walletAddress = "0x7D3F38098D69890Dfe5A9D38343b66";
     const referralLink =
-      "https://maticverious.com?ref=0x7D3F38098D69890Dfe5A9D38343b66";
+      "https://bnbkombat.live?ref=0x7D3F38098D69890Dfe5A9D38343b66";
 
   return (
     <div class="bg-[#161c2d] text-white p-6 px-3 w-full mx-auto">
@@ -17,7 +17,7 @@ const WalletDetails = () => {
           WALLET STATISTIC
         </h2>
         <div className="flex items-center justify-center bg-gray-900 rounded-lg p-3 mb-4">
-          <span className="text-purple-500 font-bold mr-2">⚡</span>
+          <span className="text-yellow-500 font-bold mr-2">⚡</span>
           <p className="text-sm truncate">{walletAddress}</p>
         </div>
         <div className="bg-gray-900 rounded-lg p-3 mb-4">
@@ -28,7 +28,7 @@ const WalletDetails = () => {
                 href={referralLink} 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-purple-400 underline"
+                className="text-yellow-500 underline"
               >
                 {referralLink}
               </a>
@@ -48,41 +48,41 @@ const WalletDetails = () => {
         {/* <!-- Split Wallet --> */}
         
 
-        <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold">Total Income:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
         </div>
 
-        <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold">Direct Business:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
         </div>
 
 
 
-        <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold">Team Business:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
         </div>
 
-        <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold">My Team:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW TEAM
           </button>
         </div>
@@ -92,63 +92,63 @@ const WalletDetails = () => {
 
 
         {/* <!-- Left Free POL --> */}
-        <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold">Free Airdrop Income:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/airdrop-income')}} class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/airdrop-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
-        <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold">F50 Program Income:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/f50-income')}} class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/f50-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
-        <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold">Magic Income:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/magic-income')}} class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/magic-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
-        <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold">Direct Income:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/direct-income')}} class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/direct-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
-        <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold">Upline Bonus:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/upline-income')}} class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/upline-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -169,10 +169,10 @@ const WalletDetails = () => {
 
           {/* <!-- Buttons --> */}
           <div class="flex flex-col gap-2">
-            <button class="w-full border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
+            <button class="w-full border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 rounded-full">
               COPY REFERRAL LINK
             </button>
-            <button class="w-full border-b-4 border-green-500    bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
+            <button class="w-full border-b-4 border-green-500    bg-yellow-600 hover:bg-yellow-5700 text-white font-semibold py-2 rounded-full">
               PROMO MATERIALS
             </button>
           </div>

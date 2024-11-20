@@ -13,7 +13,7 @@ const WalletDeposite = () => {
         <h2 class="text-xl font-bold">MAKE NEW DEPOSIT</h2>
         <p class="text-sm text-gray-400 mt-3">
           Specify deposit |
-          <span class="inline-flex items-center ml-1 text-purple-400">
+          <span class="inline-flex items-center ml-1 text-yellow-500">
             POL amount here:
           </span>
         </p>
@@ -39,7 +39,7 @@ const WalletDeposite = () => {
       </div>
 
       {/* <!-- Deposit Button --> */}
-      <button class="mt-4 w-full border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
+      <button class="mt-4 w-full border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 rounded-full">
         DEPOSIT NOW
       </button>
 
@@ -52,12 +52,12 @@ const WalletDeposite = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">My Investment:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/recharge')}} class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/recharge')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -71,20 +71,20 @@ const WalletDeposite = () => {
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">Total Withdrawl:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/withdrawl')}} class="mt-2 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/withdrawl')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
         <div class=" bg-slate-800 p-4 border-l-4 border-purple-600">
           <p class="text-sm font-semibold">Balance:</p>
           <div className="flex mt-4 gap-2 items-center">
-            <img src="/images/pl.png" className="w-10" alt="error" />
-            <p className="text-purple-600 font-bold text-2xl">0</p>
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">0</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Request Withdraw:</p>
@@ -93,7 +93,7 @@ const WalletDeposite = () => {
         placeholder="Enter amount"
         className="w-full h-10 rounded-full text-center text-black font-bold mt-4"
         />
-          <button class="mt-4 border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button class="mt-4 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             WITHDRAW
           </button>
           <p className="text-gray-400 mt-3 font-sans">
@@ -119,10 +119,10 @@ const WalletDeposite = () => {
 
           {/* <!-- Buttons --> */}
           <div class="flex flex-col gap-2">
-            <button class="w-full border-b-4 border-green-500 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
+            <button class="w-full border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 rounded-full">
               COPY REFERRAL LINK
             </button>
-            <button class="w-full border-b-4 border-green-500    bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-full">
+            <button class="w-full border-b-4 border-green-500    bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 rounded-full">
               PROMO MATERIALS
             </button>
           </div>
