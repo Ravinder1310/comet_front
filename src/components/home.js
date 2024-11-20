@@ -11,6 +11,8 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import back_logo from "./images/back_logo.png";
+import Register from "./Register/Register";
+import Login from "./Login/Login";
 
 const Home = () => {
   return (
@@ -118,9 +120,12 @@ const Home = () => {
 
         {/* Buttons */}
         <div className="space-y-3 mt-6">
-          <button className="w-full py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700">
-            REGISTER NOW!
-          </button>
+
+
+         <Register/>
+          <Login/>
+
+
           <div className="w-full py-2 text-white font-bold underline">
             Check Current State BNB Kombet smart-contract
           </div>
