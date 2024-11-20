@@ -200,7 +200,7 @@ const Home = () => {
         <ul class="space-y-4">
           <li>
             <a href="#" class="text-yellow-500 font-semibold hover:underline">
-              Maticverious Scan
+              BNB Kombat Scan
             </a>
           </li>
           <li>
