@@ -3,35 +3,39 @@ import React, { useEffect, useState } from "react";
 // import { useSelector } from "react-redux";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const F50Income = () => {
 //   const { user } = useSelector((store) => store.auth);
   const [f50IncomeHistory, setF50IncomeHistory] = useState([]);
+  const [user, setUser] = useState();
   const navigate = useNavigate();
 
 
-//   const getDailyIncomeHistory = async () => {
-//     try {
-//       let res = await axios.get(
-//         `${import.meta.env.VITE_API_URL}/api/v1/invester/daily-history/${
-//           user?._id
-//         }`
-//       );
-//       console.log(res.data.data);
-//       setDailyIncomeHistory(res.data.data);
-//     } catch (error) {
-//       console.log(error.message);
-//     }
-//   };
+  const getF50IncomeHistory = async () => {
+    try {
+      let res = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/v1/all-incomes/f100/${
+          user?._id
+        }`
+      );
+      console.log(res.data.data);
+      setF50IncomeHistory(res.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   useEffect(() => {
-    // getDailyIncomeHistory();
+    getF50IncomeHistory();
+    let userSign = localStorage.getItem("user");
+    setUser(userSign);
   }, []);
 
   return (
     <div className="p-4 bg-[#161c2d] min-h-screen text-whitepb-28">
          <button className="" onClick={() => {navigate(-1)}}> 🔙 </button>
-      <h1 className="text-center text-2xl font-mono text-white">F50 Program Income</h1>
+      <h1 className="text-center text-2xl font-mono text-white">F100 Program Income</h1>
       <div className="teamTable mx-auto mt-8 text-black w-full">
         <div className="overflow-x-auto bg-gray-600 shadow-lg shadow-white p-2 rounded-lg">
           <table className="w-full table-fixed font-medium min-h-[400px] bg-gray-600 p-2 text-white">

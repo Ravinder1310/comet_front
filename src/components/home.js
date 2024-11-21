@@ -326,7 +326,7 @@ const Home = () => {
               is the 3D blockchain that is changing the way you interact with
               crypto.
             </p>
-            <button className="w-full py-2 mt-4 border-b-4 border-red-500 bg-black hover:bg-gray-700 text-white rounded-full font-semibold shadow-md transition duration-300">
+            <button onClick={() => {navigate("/register")}} className="w-full py-2 mt-4 border-b-4 border-red-500 bg-black hover:bg-gray-700 text-white rounded-full font-semibold shadow-md transition duration-300">
               SIGN UP NOW
             </button>
           </div>

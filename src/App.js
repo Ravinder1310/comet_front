@@ -12,6 +12,8 @@ import DirectIncome from './components/incomes/directIncome';
 import UplineIncome from './components/incomes/uplineBonus';
 import WithdrawlHistory from './components/withdrawl';
 import RechargeHistory from './components/recharge';
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
       <Route path="/withdrawl" element={<WithdrawlHistory />} />
       <Route path="/recharge" element={<RechargeHistory />} />
       <Route path="/:referral" element={<Home />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

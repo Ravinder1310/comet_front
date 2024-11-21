@@ -1,15 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const WalletDetails = () => {
 
     const navigate = useNavigate();
+    const [user, setUser] = useState();
+    const [isLinkCopied, setIsLinkCopied] = useState(false);
+    const [invitationLink, setInvitationLink] = useState("");
     const walletAddress = "0x7D3F38098D69890Dfe5A9D38343b66";
-    const referralLink =
-      "https://bnbkombat.live?ref=0x7D3F38098D69890Dfe5A9D38343b66";
+    
+
+
+      const generateInvitationLink = () => {
+        const link = `${window.location.origin}/register?referral=${user?.referralCode}`;
+          setInvitationLink(link);
+        };
+      
+        const copyToClipboard = () => {
+          navigator.clipboard.writeText(invitationLink);
+          setIsLinkCopied(true);
+          toast("Invitation link copied to clipboard!", {
+            duration: 4000,
+            position: "top-center",
+            style: {
+              background: "white",
+              color: "black",
+            },
+            icon: "👏",
+          });
+      
+          setTimeout(() => {
+            setIsLinkCopied(false);
+          }, 2000);
+        };
+
+        useEffect(() => {
+          let userSign = localStorage.getItem("user");
+          setUser(userSign);
+        generateInvitationLink();
+        },[])
 
   return (
     <div class="bg-[#161c2d] text-white p-6 px-3 w-full mx-auto">
+      <Toaster/>
       {/* <!-- Header --> */}
       <button className="" onClick={() => {navigate(-1)}}> 🔙 </button>
       <div className="bg-gray-800 rounded-lg shadow-lg m-auto p-6 px-2 mt-4 w-full text-white relative">
@@ -25,12 +59,12 @@ const WalletDetails = () => {
             <span className="text-gray-300 font-bold mr-2">🔗</span>
             <p className="text-sm break-all">
               <a
-                href={referralLink} 
+                href={invitationLink} 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-yellow-500 underline"
               >
-                {referralLink}
+                 {invitationLink}
               </a>
             </p>
           </div>
@@ -164,13 +198,18 @@ const WalletDetails = () => {
 
           {/* <!-- Referral Link Input --> */}
           <div class="bg-[#0b1122] border border-gray-600 rounded-md text-white px-4 py-2 mb-4 text-center">
-            https://bnbkombet.com?ref=0x7D3F380
+          {invitationLink}
           </div>
 
           {/* <!-- Buttons --> */}
           <div class="flex flex-col gap-2">
-            <button class="w-full border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 rounded-full">
-              COPY REFERRAL LINK
+          <button className={`w-full border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 rounded-full
+              ${isLinkCopied ? "opacity-50 cursor-not-allowed" : ""}
+              `}
+              onClick={copyToClipboard}
+            disabled={isLinkCopied}
+              >
+              {isLinkCopied ? "Copied!" : "Copy Referral Link"}
             </button>
             <button class="w-full border-b-4 border-green-500    bg-yellow-600 hover:bg-yellow-5700 text-white font-semibold py-2 rounded-full">
               PROMO MATERIALS
