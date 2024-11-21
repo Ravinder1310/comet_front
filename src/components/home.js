@@ -120,7 +120,7 @@ const Home = () => {
           <h1
             className="cursor-pointer hover:underline"
             onClick={() => {
-              navigate("/wallet-deposite");
+              navigate("/users/user/wallet-deposite");
             }}
           >
             Make Deposit
@@ -128,7 +128,7 @@ const Home = () => {
           <h1
             className="cursor-pointer hover:underline"
             onClick={() => {
-              navigate("/wallet-details");
+              navigate("/users/user/wallet-details");
             }}
           >
             Wallet Statistics
@@ -375,7 +375,7 @@ const Home = () => {
             </p>
             <button
             onClick={() => {
-              navigate("/wallet-details");
+              navigate("/users/user/wallet-details");
             }}
             className="w-full py-2 border-b-4  mt-4 border-red-500 bg-black hover:bg-gray-700 text-white rounded-full font-semibold shadow-md transition duration-300">
               YOUR WALLET STATISTICS
@@ -871,14 +871,14 @@ const Home = () => {
         <div class="space-y-4">
           <button
           onClick={() => {
-            navigate("/wallet-deposite");
+            navigate("/users/user/wallet-deposite");
           }}
           class="bg-yellow-600 hover:bg-yellow-700  border-b-4 border-green-500 w-full text-white uppercase text-lg font-semibold py-2 px-6 rounded-full ">
             Make Deposit
           </button>
           <button
           onClick={() => {
-            navigate("/wallet-details");
+            navigate("/users/user/wallet-details");
           }}
           class="bg-yellow-600 hover:bg-yellow-700 text-white rounded-full font-semibold border-b-4 border-green-500 w-full  uppercase text-lg py-2 px-6 ">
             Wallet Statistic

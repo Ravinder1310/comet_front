@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../context/auth';
 import { Outlet, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Spinner from '../spinner';
 
 const PrivateRoute = () => {
   const [ok, setOk] = useState(false);
@@ -21,6 +22,7 @@ const PrivateRoute = () => {
         );
         
         if (res.data.ok) {
+            console.log('res');
           setOk(true);
         } else {
           setOk(false);
@@ -41,7 +43,7 @@ const PrivateRoute = () => {
     }
   }, [auth?.token, navigate]); // Use navigate in dependency array to avoid missing hook errors
 
-  return ok ? <Outlet /> : <></>;
+  return ok ? <Outlet /> : <Spinner />;
 };
 
 export default PrivateRoute;

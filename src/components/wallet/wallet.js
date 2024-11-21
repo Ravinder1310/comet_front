@@ -6,7 +6,6 @@ import { useAuth } from "../context/auth";
 const WalletDetails = () => {
 
     const navigate = useNavigate();
-    const [user, setUser] = useState();
     const [isLinkCopied, setIsLinkCopied] = useState(false);
     const [auth, setAuth] = useAuth();
     const [invitationLink, setInvitationLink] = useState("");
@@ -15,7 +14,7 @@ const WalletDetails = () => {
 
 
       const generateInvitationLink = () => {
-        const link = `${window.location.origin}/register?referral=${user?.referralCode}`;
+        const link = `${window.location.origin}/register/${auth?.user?.referralCode}`;
           setInvitationLink(link);
         };
       
@@ -38,8 +37,8 @@ const WalletDetails = () => {
         };
 
         useEffect(() => {
-          let userSign = localStorage.getItem("user");
-          setUser(userSign);
+          // let userSign = localStorage.getItem("user");
+          // setUser(userSign);
         generateInvitationLink();
         },[])
 
@@ -148,7 +147,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/airdrop-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/users/user/airdrop-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -160,7 +159,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/f50-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/users/user/f50-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -172,7 +171,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/magic-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/users/user/magic-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -184,7 +183,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/direct-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/users/user/direct-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -196,7 +195,7 @@ const WalletDetails = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/upline-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/users/user/upline-income')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>

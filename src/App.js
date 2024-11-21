@@ -25,15 +25,18 @@ function App() {
       <Routes>
 
       <Route path="/" element={<Home />} />
-      <Route path="/wallet-details" element={<PrivateRoute><WalletDetails /></PrivateRoute>} />
-      <Route path="/wallet-deposite" element={<PrivateRoute><WalletDeposite /></PrivateRoute>} />
-      <Route path="/airdrop-income" element={<PrivateRoute><AirdropIncome /></PrivateRoute>} />
-      <Route path="/f50-income" element={<PrivateRoute><F50Income /></PrivateRoute>} />
-      <Route path="/magic-income" element={<PrivateRoute><MagicIncome /></PrivateRoute>} />
-      <Route path="/direct-income" element={<PrivateRoute><DirectIncome /></PrivateRoute>} />
-      <Route path="/upline-income" element={<PrivateRoute><UplineIncome /></PrivateRoute>} />
-      <Route path="/withdrawl" element={<PrivateRoute><WithdrawlHistory /></PrivateRoute>} />
-      <Route path="/recharge" element={<PrivateRoute><RechargeHistory /></PrivateRoute>} />
+      <Route path="/users" element={<PrivateRoute />}>
+      <Route path="user/wallet-details" element={<WalletDetails />} />
+      <Route path="user/wallet-deposite" element={<WalletDeposite />} />
+      <Route path="user/airdrop-income" element={<AirdropIncome />} />
+      <Route path="user/f50-income" element={<F50Income />} />
+      <Route path="user/magic-income" element={<MagicIncome />} />
+      <Route path="user/direct-income" element={<DirectIncome />} />
+      <Route path="user/upline-income" element={<UplineIncome />} />
+      <Route path="user/withdrawl" element={<WithdrawlHistory />} />
+      <Route path="user/recharge" element={<RechargeHistory />} />
+    </Route>
+
       <Route path="/:referral" element={<Home />} />
       <Route path="/register" element={<Register />} />
       <Route path="/register/:referral" element={<Register />} />

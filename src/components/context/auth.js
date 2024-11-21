@@ -23,6 +23,8 @@ const AuthProvider = ({ children }) => {
     const data = localStorage.getItem("auth");
     if (data) {
       const parsedData = JSON.parse(data);
+      console.log("data",parsedData);
+      
       setAuth({
         user: parsedData.user,
         token: parsedData.token,
