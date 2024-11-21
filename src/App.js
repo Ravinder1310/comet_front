@@ -23,6 +23,7 @@ function App() {
     <div className="App">
       <ScrollToTop/>
       <Routes>
+
       <Route path="/" element={<Home />} />
       <Route path="/wallet-details" element={<PrivateRoute><WalletDetails /></PrivateRoute>} />
       <Route path="/wallet-deposite" element={<PrivateRoute><WalletDeposite /></PrivateRoute>} />
@@ -34,6 +35,7 @@ function App() {
       <Route path="/withdrawl" element={<PrivateRoute><WithdrawlHistory /></PrivateRoute>} />
       <Route path="/recharge" element={<PrivateRoute><RechargeHistory /></PrivateRoute>} />
       <Route path="/:referral" element={<Home />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/register/:referral" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/get-bnb" element={<Kombat />} />

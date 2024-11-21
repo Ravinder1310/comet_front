@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import Recharge from "../Recharge/Recharge";
 
 const WalletDeposite = () => {
 
@@ -57,29 +58,7 @@ const WalletDeposite = () => {
       </div>
 
       {/* <!-- Input Fields --> */}
-      <div class="space-y-4">
-        <input
-          type="text"
-          placeholder="1000"
-          class="w-full bg-[#0b1122] border border-gray-600 rounded-md text-white px-4 py-2 focus:outline-none"
-        />
-        <input
-          type="text"
-          placeholder="User address"
-          class="w-full bg-[#0b1122] border border-gray-600 rounded-md text-white px-4 py-2 focus:outline-none"
-        />
-        <input
-          type="password"
-          placeholder="Security Pin"
-          class="w-full bg-[#0b1122] border border-gray-600 rounded-md text-white px-4 py-2 focus:outline-none"
-        />
-      </div>
-
-      {/* <!-- Deposit Button --> */}
-      <button class="mt-4 w-full border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 rounded-full">
-        DEPOSIT NOW
-      </button>
-
+     <Recharge/>
       {/* <!-- Divider --> */}
       <div class="border-t border-gray-700 my-6"></div>
 
