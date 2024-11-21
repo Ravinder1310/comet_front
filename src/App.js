@@ -14,26 +14,34 @@ import WithdrawlHistory from './components/withdrawl';
 import RechargeHistory from './components/recharge';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
+import Kombat from './components/kombat';
+import ScrollToTop from './components/scrollTop';
+import PrivateRoute from './components/routes/privateRoute';
 
 function App() {
   return (
     <div className="App">
+      <ScrollToTop/>
       <Routes>
 
       <Route path="/" element={<Home />} />
-      <Route path="/wallet-details" element={<WalletDetails />} />
-      <Route path="/wallet-deposite" element={<WalletDeposite />} />
-      <Route path="/airdrop-income" element={<AirdropIncome />} />
-      <Route path="/f50-income" element={<F50Income />} />
-      <Route path="/magic-income" element={<MagicIncome />} />
-      <Route path="/direct-income" element={<DirectIncome />} />
-      <Route path="/upline-income" element={<UplineIncome />} />
-      <Route path="/withdrawl" element={<WithdrawlHistory />} />
-      <Route path="/recharge" element={<RechargeHistory />} />
+      <Route path="/users" element={<PrivateRoute />}>
+      <Route path="user/wallet-details" element={<WalletDetails />} />
+      <Route path="user/wallet-deposite" element={<WalletDeposite />} />
+      <Route path="user/airdrop-income" element={<AirdropIncome />} />
+      <Route path="user/f50-income" element={<F50Income />} />
+      <Route path="user/magic-income" element={<MagicIncome />} />
+      <Route path="user/direct-income" element={<DirectIncome />} />
+      <Route path="user/upline-income" element={<UplineIncome />} />
+      <Route path="user/withdrawl" element={<WithdrawlHistory />} />
+      <Route path="user/recharge" element={<RechargeHistory />} />
+    </Route>
+
       <Route path="/:referral" element={<Home />} />
       <Route path="/register" element={<Register />} />
       <Route path="/register/:referral" element={<Register />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/get-bnb" element={<Kombat />} />
       </Routes>
     </div>
   );

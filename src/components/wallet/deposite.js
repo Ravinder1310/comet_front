@@ -2,17 +2,18 @@ import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import Recharge from "../Recharge/Recharge";
+import { useAuth } from "../context/auth";
 
 const WalletDeposite = () => {
 
     const navigate = useNavigate();
-    const [user, setUser] = useState();
+    const [auth, setAuth] = useAuth();
     const [isLinkCopied, setIsLinkCopied] = useState(false);
     const [invitationLink, setInvitationLink] = useState("");
 
 
     const generateInvitationLink = () => {
-    const link = `${window.location.origin}/register?referral=${user?.referralCode}`;
+    const link = `${window.location.origin}/register/${auth?.user?.referralCode}`;
       setInvitationLink(link);
     };
   
@@ -36,8 +37,8 @@ const WalletDeposite = () => {
 
 
     useEffect(() => {
-      let userSign = localStorage.getItem("user");
-      setUser(userSign);
+      // let userSign = localStorage.getItem("user");
+      // setUser(userSign);
     generateInvitationLink();
     },[])
 
@@ -52,7 +53,7 @@ const WalletDeposite = () => {
         <p class="text-sm text-gray-400 mt-3">
           Specify deposit |
           <span class="inline-flex items-center ml-1 text-yellow-500">
-            POL amount here:
+            USDT BEP20 amount here:
           </span>
         </p>
       </div>
@@ -73,7 +74,7 @@ const WalletDeposite = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/recharge')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/users/user/recharge')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>
@@ -92,7 +93,7 @@ const WalletDeposite = () => {
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
-          <button onClick={() => {navigate('/withdrawl')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
+          <button onClick={() => {navigate('/users/user/withdrawl')}} class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full">
             VIEW HISTORY
           </button>
         </div>

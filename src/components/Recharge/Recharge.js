@@ -90,15 +90,15 @@ function UsdtTest() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-2xl font-bold mb-4">USDT Transfer to Deployer Wallet</h1>
+    <div className="flex flex-col items-center justify-center bg-gray-700 p-4 py-8">
+      {/* <h1 className="text-2xl font-bold mb-4 text-center">USDT Transfer to Deployer Wallet</h1> */}
 
-      <button
+      {/* <button
         onClick={handleConnectWallet}
-        className="mb-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+        className="mb-4 bg-blue-500 text-white w-full py-2 px-4 rounded-full hover:bg-blue-600"
       >
         {account ? `Connected: ${account.substring(0, 6)}...${account.slice(-4)}` : 'Connect Wallet'}
-      </button>
+      </button> */}
 
       <input
         type="number"
@@ -110,9 +110,9 @@ function UsdtTest() {
 
       <button
         onClick={handleTransfer}
-        className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+        className="bg-green-500 text-white w-full py-2 px-4 rounded-full font-semibold hover:bg-green-600"
       >
-        Transfer USDT
+        DEPOSITE NOW
       </button>
 
       {status && <p className="mt-4 text-sm text-gray-700">{status}</p>}
