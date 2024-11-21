@@ -3,16 +3,6 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
 import Home from './components/home';
-<<<<<<< HEAD
-import { Route, Routes } from 'react-router-dom';
-
-function App() {
-  return (
-<Routes>
-      <Route path="/:referral" element={<Home />} />
-      <Route path="/" element={<Home />} />
-</Routes>
-=======
 import WalletDetails from './components/wallet/wallet';
 import WalletDeposite from './components/wallet/deposite';
 import AirdropIncome from './components/incomes/airdropIncome';
@@ -27,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
+      <Route path="/:referral" element={<Home />} />
       <Route path="/" element={<Home />} />
       <Route path="/wallet-details" element={<WalletDetails />} />
       <Route path="/wallet-deposite" element={<WalletDeposite />} />
@@ -39,7 +30,6 @@ function App() {
       <Route path="/recharge" element={<RechargeHistory />} />
       </Routes>
     </div>
->>>>>>> f0458225084e226a4ae4f29427980810c06dfd5d
   );
 }
 
