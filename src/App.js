@@ -12,12 +12,14 @@ import DirectIncome from './components/incomes/directIncome';
 import UplineIncome from './components/incomes/uplineBonus';
 import WithdrawlHistory from './components/withdrawl';
 import RechargeHistory from './components/recharge';
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-      <Route path="/:referral" element={<Home />} />
+
       <Route path="/" element={<Home />} />
       <Route path="/wallet-details" element={<WalletDetails />} />
       <Route path="/wallet-deposite" element={<WalletDeposite />} />
@@ -28,6 +30,10 @@ function App() {
       <Route path="/upline-income" element={<UplineIncome />} />
       <Route path="/withdrawl" element={<WithdrawlHistory />} />
       <Route path="/recharge" element={<RechargeHistory />} />
+      <Route path="/:referral" element={<Home />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/register/:referral" element={<Register />} />
+      <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

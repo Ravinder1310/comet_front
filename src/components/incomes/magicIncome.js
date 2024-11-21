@@ -3,29 +3,34 @@ import React, { useEffect, useState } from "react";
 // import { useSelector } from "react-redux";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const MagicIncome = () => {
 //   const { user } = useSelector((store) => store.auth);
   const [magicIncomeHistory, setMagicIncomeHistory] = useState([]);
   const navigate = useNavigate();
+  const [user, setUser] = useState();
 
 
-//   const getDailyIncomeHistory = async () => {
-//     try {
-//       let res = await axios.get(
-//         `${import.meta.env.VITE_API_URL}/api/v1/invester/daily-history/${
-//           user?._id
-//         }`
-//       );
-//       console.log(res.data.data);
-//       setDailyIncomeHistory(res.data.data);
-//     } catch (error) {
-//       console.log(error.message);
-//     }
-//   };
+
+  const getMagicIncomeHistory = async () => {
+    try {
+      let res = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/v1/all-incomes/magic/${
+          user?._id
+        }`
+      );
+      console.log(res.data.data);
+      setMagicIncomeHistory(res.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   useEffect(() => {
-    // getDailyIncomeHistory();
+    getMagicIncomeHistory();
+    let userSign = localStorage.getItem("user");
+    setUser(userSign);
   }, []);
 
   return (

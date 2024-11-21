@@ -64,6 +64,7 @@ const Login = () => {
 
     // Handle login submission
     const handleSubmit = async (e) => {
+        
         e.preventDefault();
         setError('');
         setLoading(true);
@@ -81,6 +82,8 @@ const Login = () => {
         }
 
         try {
+            // console.log('iser');
+            
             const response = await axios.post(
                 `${process.env.REACT_APP_API_URL}/user/login`,
                 { walletAddress },
@@ -106,6 +109,7 @@ const Login = () => {
 
     return (
         <div className="login-container">
+      <button className="mt-4" onClick={() => {navigate(-1)}}> 🔙 </button>
             <div className="login-card">
                 <h2>Login</h2>
                 <form onSubmit={handleSubmit}>
@@ -129,7 +133,7 @@ const Login = () => {
                     {error && <p style={{ color: 'red' }}>{error}</p>}
                     <p>
                         Don't have an account?{' '}
-                        <a className="text-yellow-500" href="/invester-registration">
+                        <a className="text-purple-800" href="/register">
                             Register
                         </a>
                     </p>
