@@ -16,7 +16,7 @@ function Register() {
   useEffect(() => {
     const fetchReferralAndWallet = async () => {
       // Extract referral code from the URL path
-      const referralCodeFromPath = location.pathname.split("/")[1];
+      const referralCodeFromPath = location.pathname.split("/register/")[1];
       if (referralCodeFromPath) {
         setReferredBy(referralCodeFromPath);
       } else {

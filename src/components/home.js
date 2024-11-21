@@ -182,8 +182,8 @@ const Home = () => {
           <div className="w-full py-2 text-white font-bold underline">
             Check Current State BNB Kombet smart-contract
           </div>
-          <button className="w-full py-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white rounded-full font-semibold">
-            RESCAN
+          <button onClick={() => {navigate('/login')}} className="w-full py-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white rounded-full font-semibold">
+            Login
           </button>
           <p className="text-white">
             If matic is deducted and id not registered, PLEASE DONT MAKE THE
@@ -204,8 +204,8 @@ const Home = () => {
             </a>
           </li>
           <li>
-            <a href="#" class="text-yellow-500 font-semibold hover:underline">
-              See POL Coin at Coin Market Cap
+            <a href="https://coinmarketcap.com/currencies/bnb/" target="blank" class="text-yellow-500 font-semibold hover:underline">
+              See BNB Coin at Coin Market Cap
             </a>
           </li>
           <li class="text-sm">
@@ -287,7 +287,7 @@ const Home = () => {
               <span className="font-semibold">MetaMask</span> browser
               extensions. You can get BNB Kombat coins via popular exchangers.
             </p>
-            <button className="w-full py-2 mt-4 border-b-4 border-red-500 bg-black hover:bg-gray-700 text-white font-semibold rounded-full shadow-md transition duration-300">
+            <button onClick={() => {navigate("/get-bnb")}} className="w-full py-2 mt-4 border-b-4 border-red-500 bg-black hover:bg-gray-700 text-white font-semibold rounded-full shadow-md transition duration-300">
               HOW TO GET BNB Kombat
             </button>
           </div>

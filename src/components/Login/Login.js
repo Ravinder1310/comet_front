@@ -5,6 +5,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
+import { useAuth } from '../context/auth';
 
 const Login = () => {
     const [walletAddress, setWalletAddress] = useState('');
@@ -12,6 +13,7 @@ const Login = () => {
     const [loading, setLoading] = useState(false);
     const [isBSC, setIsBSC] = useState(false); // Check if user is on Binance Smart Chain
     const navigate = useNavigate();
+    const [auth, setAuth] = useAuth();
 
     // Fetch wallet address and check network
     useEffect(() => {
@@ -91,9 +93,14 @@ const Login = () => {
             );
 
             if (response.data.success) {
-                localStorage.setItem('user', JSON.stringify(response.data.user)); // Save user to localStorage
+                setAuth({
+                    ...auth,
+                    user: response.data.user,
+                    token: response.data.token,
+                  });
+                localStorage.setItem('auth', JSON.stringify(response.data)); // Save user to localStorage
                 toast.success('Login successful!');
-                navigate('/'); // Redirect to homepage
+                navigate('/');  // Redirect to homepage
             } else {
                 setError(response.data.message);
                 toast.error(response.data.message);

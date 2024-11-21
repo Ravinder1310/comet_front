@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/auth";
 
 const WalletDetails = () => {
 
     const navigate = useNavigate();
     const [user, setUser] = useState();
     const [isLinkCopied, setIsLinkCopied] = useState(false);
+    const [auth, setAuth] = useAuth();
     const [invitationLink, setInvitationLink] = useState("");
     const walletAddress = "0x7D3F38098D69890Dfe5A9D38343b66";
     
@@ -40,6 +42,18 @@ const WalletDetails = () => {
           setUser(userSign);
         generateInvitationLink();
         },[])
+
+
+        const handleLogout = () => {
+          setAuth({
+            ...auth,
+            user: null,
+            token: "",
+          });
+          localStorage.removeItem("auth");
+          navigate("/login");
+          toast.success("Logout successfully");
+        };
 
   return (
     <div class="bg-[#161c2d] text-white p-6 px-3 w-full mx-auto">
@@ -211,8 +225,10 @@ const WalletDetails = () => {
               >
               {isLinkCopied ? "Copied!" : "Copy Referral Link"}
             </button>
-            <button class="w-full border-b-4 border-green-500    bg-yellow-600 hover:bg-yellow-5700 text-white font-semibold py-2 rounded-full">
-              PROMO MATERIALS
+            <button
+            onClick={handleLogout}
+            class="w-full border-b-4 border-green-500    bg-yellow-600 hover:bg-yellow-5700 text-white font-semibold py-2 rounded-full">
+              LOGOUT
             </button>
           </div>
 
