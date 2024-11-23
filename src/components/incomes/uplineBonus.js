@@ -4,12 +4,13 @@ import React, { useEffect, useState } from "react";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useAuth } from "../context/auth";
 
 const UplineIncome = () => {
 //   const { user } = useSelector((store) => store.auth);
   const [uplineIncomeHistory, setUplineIncomeHistory] = useState([]);
   const navigate = useNavigate();
-  const [user, setUser] = useState();
+  const [auth, setAuth] = useAuth();
 
 
 
@@ -17,7 +18,7 @@ const UplineIncome = () => {
     try {
       let res = await axios.get(
         `${process.env.REACT_APP_API_URL}/all-incomes/level/${
-          user?._id
+          auth.user?._id
         }`
       );
       console.log(res.data.data);
@@ -29,8 +30,8 @@ const UplineIncome = () => {
 
   useEffect(() => {
     getUplineIncomeHistory();
-    let userSign = localStorage.getItem("user");
-    setUser(userSign);
+    // let userSign = localStorage.getItem("user");
+    // setUser(userSign);
   }, []);
 
   return (

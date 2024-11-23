@@ -61,7 +61,7 @@ const BnbKombat = () => {
                       $ {parseFloat(daily.amount).toFixed(2)}
                     </td>
                     <td className=" p-2">
-                    {parseFloat(daily.amount).toFixed(2)}
+                    10
                     </td>
                     <td className=" p-2">
                       {moment(daily.createdAt).format("YYYY-MM-DD")}

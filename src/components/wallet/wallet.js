@@ -2,12 +2,18 @@ import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth";
+import axios from "axios";
 
 const WalletDetails = () => {
   const navigate = useNavigate();
   const [isLinkCopied, setIsLinkCopied] = useState(false);
   const [auth, setAuth] = useAuth();
   const [invitationLink, setInvitationLink] = useState("");
+  const [airTotal, setAirTotal] = useState(0);
+  const [f100Total, setF100Total] = useState(0);
+  const [backTotal, setBackTotal] = useState(0);
+  const [magicTotal, setMagicTotal] = useState(0);
+  const [uplineTotal, setUplineTotal] = useState(0);
   
 
   const generateInvitationLink = () => {
@@ -33,11 +39,131 @@ const WalletDetails = () => {
     }, 2000);
   };
 
+
+
+  const getAirDropIncomeHistory = async () => {
+    try {
+      let res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/admin/activate-history/${
+          auth?.user?._id
+        }`
+      );
+      console.log(res.data.data);
+      // setAirdropIncomeHistory(res.data.data);
+      let air = 0;
+
+      for(let i=0;i<res.data.data.length;i++){
+          air ++;
+      }
+
+      setAirTotal(air*10);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+
+
+
+  const getF50IncomeHistory = async () => {
+    try {
+      let res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/all-incomes/f100/${
+          auth?.user?._id
+        }`
+      );
+      // console.log(res.data.data);
+      let f100 = 0;
+
+      for(let i=0;i<res.data.data.length;i++){
+        f100 += res.data.data[i].amount;
+      }
+
+      setF100Total(f100);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+
+
+  const getDirectIncomeHistory = async () => {
+    try {
+      let res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/all-incomes/back-amount/${
+          auth?.user?._id
+        }`
+      );
+      // console.log(res.data.data);
+      let back = 0;
+
+      for(let i=0;i<res.data.data.length;i++){
+        back += res.data.data[i].amount;
+      }
+
+      setBackTotal(back);
+    } catch (error) {
+      console.log(error.message); 
+    }
+  };
+
+
+
+
+  const getMagicIncomeHistory = async () => {
+    try {
+      let res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/all-incomes/magic/${
+          auth?.user?._id
+        }`
+      );
+      // console.log(res.data.data);
+      let magic = 0;
+
+      for(let i=0;i<res.data.data.length;i++){
+        magic += res.data.data[i].amount;
+      }
+
+      setMagicTotal(magic);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+
+
+
+  const getUplineIncomeHistory = async () => {
+    try {
+      let res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/all-incomes/level/${
+          auth?.user?._id
+        }`
+      );
+      // console.log(res.data.data);
+      let upline = 0;
+
+      for(let i=0;i<res.data.data.length;i++){
+        upline += res.data.data[i].amount;
+      }
+
+      setUplineTotal(upline);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+
+
   useEffect(() => {
     // let userSign = localStorage.getItem("user");
     // setUser(userSign);
     console.log(auth?.user?.teamSize.length);
-    
+    getAirDropIncomeHistory();
+    getF50IncomeHistory();
+    getDirectIncomeHistory();
+    getMagicIncomeHistory();
+    getUplineIncomeHistory();
     generateInvitationLink();
   }, []);
 
@@ -108,7 +234,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">$0</p>
+            <p className="text-yellow-500 font-bold text-2xl">${auth?.user?.totalEarning}</p>
           </div>
         </div>
 
@@ -128,7 +254,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">${auth?.user?.teamBusiness || 0}</p>
+            <p className= "text-yellow-500 font-bold text-2xl" >${auth?.user?.teamBusiness || 0}</p>
           </div>
         </div>
 
@@ -156,7 +282,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">$0</p>
+            <p className="text-yellow-500 font-bold text-2xl">${airTotal}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
@@ -184,7 +310,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">$0</p>
+            <p className="text-yellow-500 font-bold text-2xl">${f100Total}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
@@ -205,7 +331,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">$0</p>
+            <p className="text-yellow-500 font-bold text-2xl">${backTotal}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
@@ -226,7 +352,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">$0</p>
+            <p className="text-yellow-500 font-bold text-2xl">${magicTotal}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
@@ -264,7 +390,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">$0</p>
+            <p className="text-yellow-500 font-bold text-2xl">${uplineTotal}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>

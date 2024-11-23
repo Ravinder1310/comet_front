@@ -14,7 +14,7 @@ const [auth, setAuth] = useAuth();
   const getWithdrawlHistory = async () => {
     try {
       let res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/v1/user/recharge-history/${
+        `${process.env.REACT_APP_API_URL}/user/recharge-history/${
           auth?.user?._id
         }`
       );
