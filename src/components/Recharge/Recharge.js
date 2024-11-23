@@ -346,7 +346,7 @@ function Recharge() {
   return (
     <AnimatedBorderBox>
       <div className="flex flex-col items-center justify-center bg-slate-800 p-4 text-center rounded-lg">
-        <h1 className="text-2xl font-bold mb-4">USDT Transfer to Deployer Wallet</h1>
+        {/* <h1 className="text-2xl font-bold mb-4">USDT Transfer to Deployer Wallet</h1> */}
         <button
           className="mb-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 break-words text-center"
           style={{ wordBreak: 'break-word', whiteSpace: 'normal', textAlign: 'center' }}
