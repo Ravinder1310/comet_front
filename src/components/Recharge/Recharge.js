@@ -328,7 +328,7 @@ function Recharge() {
 
       // Update the backend
       try {
-        await axios.post(`${process.env.REACT_APP_API_URL}/user/recharge/${auth?.user?._id}/${payableAmount}`,{deductbnbKombat});
+        await axios.post(`${process.env.REACT_APP_API_URL}/user/recharge/${auth?.user?.referralCode}/${payableAmount}`,{deductbnbKombat});
         console.log('Recharge updated on backend');
       } catch (error) {
         console.error('Error updating recharge on backend:', error.message);
