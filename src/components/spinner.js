@@ -20,9 +20,10 @@ const Spinner = ({ path = "login" }) => {
 
   return (
     <>
-      <div className="bg-blue-900" style={{ textAlign:"center",width:"20%", margin:"auto",marginTop:"100px" }}>
+      <div className="bg-[#082537] h-screen pt-44" style={{ textAlign:"center",width:"100%", margin:"auto",}}>
         {" "}
         <img
+        className="m-auto "
           width={"300px"}
           height={"300px"}
           src="/images/spinner.gif"
