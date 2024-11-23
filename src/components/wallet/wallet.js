@@ -278,17 +278,17 @@ const WalletDetails = () => {
 
         <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold text-left text-white">
-           Free Airdrop Income :
+          Free Airdrop Income:
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">${airTotal}</p>
+            <p className="text-yellow-500 font-bold text-2xl">${uplineTotal}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
           <button
             onClick={() => {
-              navigate("/users/user/airdrop-income");
+              navigate("/users/user/upline-income");
             }}
             class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full"
           >
@@ -384,7 +384,7 @@ const WalletDetails = () => {
             VIEW HISTORY
           </button>
         </div> */}
-        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
+        {/* <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold text-left text-white">
             Upline Bonus:
           </p>
@@ -402,7 +402,7 @@ const WalletDetails = () => {
           >
             VIEW HISTORY
           </button>
-        </div>
+        </div> */}
 
         <div class="bg-[#161c2d] text-white rounded-lg shadow-lg w-[90%] mx-auto mt-6">
           {/* <!-- Referral Link Header --> */}

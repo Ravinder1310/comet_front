@@ -37,14 +37,15 @@ const UplineIncome = () => {
   return (
     <div className="p-4 bg-[#161c2d] min-h-screen text-whitepb-28">
          <button className="" onClick={() => {navigate(-1)}}> 🔙 </button>
-      <h1 className="text-center text-2xl font-mono text-white">Upline Income</h1>
+      <h1 className="text-center text-2xl font-mono text-white">Airdrop Income</h1>
       <div className="teamTable mx-auto mt-8 text-black w-full">
         <div className="overflow-x-auto bg-gray-600 shadow-lg shadow-white p-2 rounded-lg">
           <table className="w-full table-fixed font-medium bg-gray-600 p-2 text-white">
             <thead>
               <tr className="headTeamTH text-center font-medium text-sm text-white p-2">
                 <th className="w-20 whitespace-nowrap p-2">Sr No.</th>
-                <th className="w-32 whitespace-nowrap p-2">Percentage</th>
+                <th className="w-32 whitespace-nowrap p-2">From</th>
+                <th className="w-32 whitespace-nowrap p-2">Level</th>
                 <th className="w-32 whitespace-nowrap p-2">Amount</th>
                 {/* <th className="w-32 whitespace-nowrap p-2">Direct Business</th> */}
                 <th className="w-32 whitespace-nowrap p-2">Date</th>
@@ -58,7 +59,8 @@ const UplineIncome = () => {
                     key={daily._id}
                   >
                     <td className=" p-2">{index + 1}</td>
-                    <td className=" p-2">{daily.balance}</td>
+                    <td className=" p-2">{daily.from}</td>
+                    <td className=" p-2">{daily.level}</td>
                     <td className=" p-2">
                       $ {parseFloat(daily.amount).toFixed(2)}
                     </td>
@@ -70,7 +72,7 @@ const UplineIncome = () => {
               ) : (
                 <tr className="thteamInvite border-b text-center border-gray-400 text-white">
                   <td colSpan="4" className="py-4 px-2 text-center">
-                    No Upline income yet 
+                    No Airdrop income yet 
                   </td>
                 </tr>
               )}
