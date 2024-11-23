@@ -1,10 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Web3 from 'web3';
+import { motion } from "framer-motion";
+import axios from 'axios';
+import { useAuth } from '../context/auth';
+
+
+
+const AnimatedBorderBox = ({ children }) => (
+  <div className="relative p-[3px] w-[100%] m-auto rounded-lg overflow-hidden mt-2 mb-10">
+    {/* Rotating Background */}
+    <motion.div
+      className="absolute inset-0 z-10"
+      animate={{ rotate: 360 }} // Only the background rotates
+      transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+      style={{
+        background: "white",
+        backgroundSize: "200% 200%", // Smooth transition of colors
+        borderRadius: "inherit", // Matches parent border radius
+      }}
+    />
+
+    {/* Inner Content with Corner Borders */}
+    <div className="relative bg-gradient-to-r from-yellow-400 via-yellow-600  to-yellow-800 text-white rounded-lg z-10">
+      {children}
+    </div>
+  </div>
+);
+
+
+
 
 function Recharge() {
   const [amount, setAmount] = useState('');
   const [account, setAccount] = useState('');
   const [status, setStatus] = useState('');
+  const [auth, setAuth] = useAuth();
   const contractAddress = '0xF3c68B926Dd275b6Fa7870A68A34230a2E20Bdd9';
   const usdtAddress = '0x55d398326f99059fF775485246999027B3197955';
 
@@ -90,7 +120,16 @@ function Recharge() {
         const transferredAmount = web3.utils.fromWei(transferredAmountHex, 'ether');
         console.log(`Transferred Amount: ${transferredAmount} USDT`);
 
-        
+        try {
+          let res = await axios.post(
+            `${process.env.REACT_APP_API_URL}/user/recharge/${
+              auth?.user?._id
+            }/${transferredAmount}`
+          );
+          console.log(res.data.message);
+        } catch (error) {
+          console.log(error.message);
+        }
 
       } else {
         console.log("No transfer log found");
@@ -102,16 +141,28 @@ function Recharge() {
     }
   };
 
+
+  useEffect(() => {
+    handleConnectWallet();
+  },[])
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <AnimatedBorderBox>
+
+    <div className="flex flex-col items-center justify-center bg-slate-800 p-4 text-center rounded-lg">
       <h1 className="text-2xl font-bold mb-4">USDT Transfer to Deployer Wallet</h1>
 
       <button
-        onClick={handleConnectWallet}
-        className="mb-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-      >
-        {account ? `Connected: ${account.substring(0, 6)}...${account.slice(-4)}` : 'Connect Wallet'}
-      </button>
+  // onClick={handleConnectWallet}
+  className="mb-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 break-words text-center"
+  style={{
+    wordBreak: 'break-word',
+    whiteSpace: 'normal',
+    textAlign: 'center',
+  }}
+>
+  {`${account}`}
+</button>
 
       <input
         type="number"
@@ -128,8 +179,10 @@ function Recharge() {
         Transfer USDT
       </button>
 
-      {status && <p className="mt-4 text-sm text-gray-700">{status}</p>}
+      {status && <p className="mt-4 text-xl font-bold text-yellow-500">{status}</p>}
     </div>
+    </AnimatedBorderBox>
+
   );
 }
 

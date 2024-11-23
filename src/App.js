@@ -37,8 +37,9 @@ function App() {
       <Route path="user/airdrop-income" element={<DirectIncome />} />
       <Route path="user/upline-income" element={<UplineIncome />} />
       <Route path="user/withdrawl" element={<WithdrawlHistory />} />
-      <Route path="user/recharge" element={<RechargeHistory />} />
+      {/* <Route path="user/recharge" element={<RechargeHistory />} /> */}
       <Route path="user/myteam" element={<MyTeam />} />
+      <Route path="user/recharge-history" element={<RechargeHistory />} />
     </Route>
 
       <Route path="/:referral" element={<Home />} />

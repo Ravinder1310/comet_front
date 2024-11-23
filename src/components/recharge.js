@@ -3,28 +3,30 @@ import React, { useEffect, useState } from "react";
 // import { useSelector } from "react-redux";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "./context/auth";
 
 const RechargeHistory = () => {
 //   const { user } = useSelector((store) => store.auth);
+const [auth, setAuth] = useAuth();
   const [rechargeHistory, setRechargeHistory] = useState([]);
   const navigate = useNavigate();
 
-//   const getWithdrawlHistory = async () => {
-//     try {
-//       let res = await axios.get(
-//         `${import.meta.env.VITE_API_URL}/api/v1/invester/withdrawl-history/${
-//           user?._id
-//         }`
-//       );
-//       console.log(res.data.data);
-//       setWithdrawlHistory(res.data.data);
-//     } catch (error) {
-//       console.log(error.message);
-//     }
-//   };
+  const getWithdrawlHistory = async () => {
+    try {
+      let res = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/v1/user/recharge-history/${
+          auth?.user?._id
+        }`
+      );
+      console.log(res.data.data);
+      setRechargeHistory(res.data.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   useEffect(() => {
-    // getWithdrawlHistory();
+    getWithdrawlHistory();
   }, []);
 
   return (
