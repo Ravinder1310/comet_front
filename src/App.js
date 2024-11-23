@@ -30,11 +30,11 @@ function App() {
       <Route path="/users" element={<PrivateRoute />}>
       <Route path="user/wallet-details" element={<WalletDetails />} />
       <Route path="user/wallet-deposite" element={<WalletDeposite />} />
-      <Route path="user/airdrop-income" element={<AirdropIncome />} />
-      <Route path="user/bnb-kombat" element={<BnbKombat />} />
+      <Route path="user/direct-income" element={<AirdropIncome />} />
+      <Route path="user/airdrop-income" element={<BnbKombat />} />
       <Route path="user/f50-income" element={<F50Income />} />
       <Route path="user/magic-income" element={<MagicIncome />} />
-      <Route path="user/direct-income" element={<DirectIncome />} />
+      <Route path="user/airdrop-income" element={<DirectIncome />} />
       <Route path="user/upline-income" element={<UplineIncome />} />
       <Route path="user/withdrawl" element={<WithdrawlHistory />} />
       {/* <Route path="user/recharge" element={<RechargeHistory />} /> */}
