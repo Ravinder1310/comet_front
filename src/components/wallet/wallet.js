@@ -282,7 +282,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">${airTotal}</p>
+            <p className="text-yellow-500 font-bold text-2xl">${auth?.user?.bnbKombat}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
