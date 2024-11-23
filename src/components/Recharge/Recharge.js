@@ -79,8 +79,23 @@ function Recharge() {
         },
       ];
       const contract = new web3.eth.Contract(contractAbi, contractAddress);
-      await contract.methods.sendUSDTToDeployer(amountInWei).send({ from: account });
+      const transactionResponse=await contract.methods.sendUSDTToDeployer(amountInWei).send({ from: account });
+      console.log("response of transaction==>",transactionResponse)
 
+      const log = transactionResponse.logs.find(
+        (log) => log.address.toLowerCase() === usdtAddress.toLowerCase()
+      );
+      if (log) {
+        const transferredAmountHex = log.data;
+        const transferredAmount = web3.utils.fromWei(transferredAmountHex, 'ether');
+        console.log(`Transferred Amount: ${transferredAmount} USDT`);
+
+        
+
+      } else {
+        console.log("No transfer log found");
+      }
+  
       setStatus('Transfer successful!');
     } catch (error) {
       setStatus(`Error: ${error.message}`);
