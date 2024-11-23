@@ -43,7 +43,7 @@ const F50Income = () => {
             <thead>
               <tr className="headTeamTH text-center font-medium text-sm text-white p-2">
                 <th className="w-20 whitespace-nowrap p-2">Sr No.</th>
-                <th className="w-32 whitespace-nowrap p-2">Percentage</th>
+                <th className="w-32 whitespace-nowrap p-2">Package</th>
                 <th className="w-32 whitespace-nowrap p-2">Amount</th>
                 {/* <th className="w-32 whitespace-nowrap p-2">Direct Business</th> */}
                 <th className="w-32 whitespace-nowrap p-2">Date</th>
@@ -57,7 +57,7 @@ const F50Income = () => {
                     key={daily._id}
                   >
                     <td className=" p-2">{index + 1}</td>
-                    <td className=" p-2">{daily.balance}</td>
+                    <td className=" p-2">{daily.rechargeWallet}</td>
                     <td className=" p-2">
                       $ {parseFloat(daily.amount).toFixed(2)}
                     </td>

@@ -3,12 +3,15 @@ import React, { useEffect, useState } from "react";
 // import { useSelector } from "react-redux";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/auth";
 import axios from "axios";
 
 const MagicIncome = () => {
 //   const { user } = useSelector((store) => store.auth);
   const [magicIncomeHistory, setMagicIncomeHistory] = useState([]);
   const navigate = useNavigate();
+  const [auth, setAuth] = useAuth();
+  
   const [user, setUser] = useState();
 
 
@@ -17,7 +20,7 @@ const MagicIncome = () => {
     try {
       let res = await axios.get(
         `${process.env.REACT_APP_API_URL}/all-incomes/magic/${
-          user?._id
+          auth?.user?._id
         }`
       );
       console.log(res.data.data);
@@ -43,7 +46,8 @@ const MagicIncome = () => {
             <thead>
               <tr className="headTeamTH text-center font-medium text-sm text-white p-2">
                 <th className="w-20 whitespace-nowrap p-2">Sr No.</th>
-                <th className="w-32 whitespace-nowrap p-2">Percentage</th>
+                <th className="w-32 whitespace-nowrap p-2">From</th>
+                <th className="w-32 whitespace-nowrap p-2">Bussiness</th>
                 <th className="w-32 whitespace-nowrap p-2">Amount</th>
                 {/* <th className="w-32 whitespace-nowrap p-2">Direct Business</th> */}
                 <th className="w-32 whitespace-nowrap p-2">Date</th>
@@ -57,7 +61,8 @@ const MagicIncome = () => {
                     key={daily._id}
                   >
                     <td className=" p-2">{index + 1}</td>
-                    <td className=" p-2">{daily.balance}</td>
+                    <td className=" p-2">{daily.from}</td>
+                    <td className=" p-2">{daily.business}</td>
                     <td className=" p-2">
                       $ {parseFloat(daily.amount).toFixed(2)}
                     </td>

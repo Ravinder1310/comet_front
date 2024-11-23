@@ -34,7 +34,7 @@ const [auth, setAuth] = useAuth();
   return (
     <div className="p-4 bg-[#161c2d] min-h-screen text-whitepb-28">
          <button className="" onClick={() => {navigate(-1)}}> 🔙 </button>
-      <h1 className="text-center text-2xl font-mono text-white mt-10">100% Back Amount</h1>
+      <h1 className="text-center text-2xl font-mono text-white mt-10">100% Direct Income</h1>
       <div className="teamTable mx-auto mt-8 text-black w-full">
         <div className="overflow-x-auto bg-gray-600 shadow-lg shadow-white p-2 rounded-lg">
           <table className="w-full table-fixed font-medium bg-gray-600 p-2 text-white">
