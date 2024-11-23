@@ -9,7 +9,7 @@ const Spinner = ({ path = "login" }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCount((prevVal) => --prevVal);
-    }, 1000);
+    }, 3000);
 
     count === 0 &&
       navigate(`/${path}`, {
@@ -20,12 +20,12 @@ const Spinner = ({ path = "login" }) => {
 
   return (
     <>
-      <div style={{ textAlign:"center",width:"20%", margin:"auto",marginTop:"100px" }}>
+      <div className="bg-blue-900" style={{ textAlign:"center",width:"20%", margin:"auto",marginTop:"100px" }}>
         {" "}
         <img
           width={"300px"}
           height={"300px"}
-          src="/images/spinner-unscreen.gif"
+          src="/images/spinner.gif"
         />
       </div>
     </>
