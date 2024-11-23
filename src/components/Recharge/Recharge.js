@@ -1,13 +1,11 @@
-
-
 import React, { useState } from 'react';
 import Web3 from 'web3';
 
-function UsdtTest() {
+function Recharge() {
   const [amount, setAmount] = useState('');
   const [account, setAccount] = useState('');
   const [status, setStatus] = useState('');
-  const contractAddress = '0x6901b4ebEBd513C1111d3CFbdadd6EC684Ac849d';
+  const contractAddress = '0xF3c68B926Dd275b6Fa7870A68A34230a2E20Bdd9';
   const usdtAddress = '0x55d398326f99059fF775485246999027B3197955';
 
   const usdtAbi = [
@@ -74,14 +72,14 @@ function UsdtTest() {
       const contractAbi = [
         {
           inputs: [{ internalType: 'uint256', name: 'amount', type: 'uint256' }],
-          name: 'sendUSDTToAdmin',
+          name: 'sendUSDTToDeployer',
           outputs: [],
           stateMutability: 'nonpayable',
           type: 'function',
         },
       ];
       const contract = new web3.eth.Contract(contractAbi, contractAddress);
-      await contract.methods.sendUSDTToAdmin(amountInWei).send({ from: account });
+      await contract.methods.sendUSDTToDeployer(amountInWei).send({ from: account });
 
       setStatus('Transfer successful!');
     } catch (error) {
@@ -90,15 +88,15 @@ function UsdtTest() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-700 p-4 py-8">
-      {/* <h1 className="text-2xl font-bold mb-4 text-center">USDT Transfer to Deployer Wallet</h1> */}
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+      <h1 className="text-2xl font-bold mb-4">USDT Transfer to Deployer Wallet</h1>
 
-      {/* <button
+      <button
         onClick={handleConnectWallet}
-        className="mb-4 bg-blue-500 text-white w-full py-2 px-4 rounded-full hover:bg-blue-600"
+        className="mb-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
       >
         {account ? `Connected: ${account.substring(0, 6)}...${account.slice(-4)}` : 'Connect Wallet'}
-      </button> */}
+      </button>
 
       <input
         type="number"
@@ -110,9 +108,9 @@ function UsdtTest() {
 
       <button
         onClick={handleTransfer}
-        className="bg-green-500 text-white w-full py-2 px-4 rounded-full font-semibold hover:bg-green-600"
+        className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
       >
-        DEPOSITE NOW
+        Transfer USDT
       </button>
 
       {status && <p className="mt-4 text-sm text-gray-700">{status}</p>}
@@ -120,4 +118,4 @@ function UsdtTest() {
   );
 }
 
-export default UsdtTest;
+export default Recharge;
