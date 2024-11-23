@@ -16,7 +16,7 @@ const MagicIncome = () => {
   const getMagicIncomeHistory = async () => {
     try {
       let res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/v1/all-incomes/magic/${
+        `${process.env.REACT_APP_API_URL}/all-incomes/magic/${
           user?._id
         }`
       );
@@ -39,7 +39,7 @@ const MagicIncome = () => {
       <h1 className="text-center text-2xl font-mono text-white">Magic Income</h1>
       <div className="teamTable mx-auto mt-8 text-black w-full">
         <div className="overflow-x-auto bg-gray-600 shadow-lg shadow-white p-2 rounded-lg">
-          <table className="w-full table-fixed font-medium min-h-[400px] bg-gray-600 p-2 text-white">
+          <table className="w-full table-fixed font-medium bg-gray-600 p-2 text-white">
             <thead>
               <tr className="headTeamTH text-center font-medium text-sm text-white p-2">
                 <th className="w-20 whitespace-nowrap p-2">Sr No.</th>

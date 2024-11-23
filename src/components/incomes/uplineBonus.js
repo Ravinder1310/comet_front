@@ -16,7 +16,7 @@ const UplineIncome = () => {
   const getUplineIncomeHistory = async () => {
     try {
       let res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/v1/all-incomes/level/${
+        `${process.env.REACT_APP_API_URL}/all-incomes/level/${
           user?._id
         }`
       );
@@ -39,7 +39,7 @@ const UplineIncome = () => {
       <h1 className="text-center text-2xl font-mono text-white">Upline Income</h1>
       <div className="teamTable mx-auto mt-8 text-black w-full">
         <div className="overflow-x-auto bg-gray-600 shadow-lg shadow-white p-2 rounded-lg">
-          <table className="w-full table-fixed font-medium min-h-[400px] bg-gray-600 p-2 text-white">
+          <table className="w-full table-fixed font-medium bg-gray-600 p-2 text-white">
             <thead>
               <tr className="headTeamTH text-center font-medium text-sm text-white p-2">
                 <th className="w-20 whitespace-nowrap p-2">Sr No.</th>

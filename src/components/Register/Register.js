@@ -95,21 +95,24 @@ function Register() {
   };
 
   return (
-    <div className="bg-black min-h-screen p-3">
+    <div className="bg-black min-h-screen p-6">
       <button
         className=""
         onClick={() => {
-          navigate(-1);
+          navigate("/");
         }}
       >
         {" "}
         🔙{" "}
       </button>
-      <div className="w-full m-auto mt-44 p-5 px-2 bg-gradient-to-r from-yellow-500 via-yellow-600  to-yellow-600 text-white rounded-lg shadow-lg">
+      <div className="flex w-[70%] m-auto mt-10  items-center">
+        <img className="w-18 m-auto" src="/images/xyz.png" alt="error" />
+      </div>
+      <div className="w-full m-auto mt-10 p-5 px-2 bg-gradient-to-r from-yellow-500 via-yellow-600  to-yellow-600 text-white rounded-lg shadow-lg">
         <h2 className="text-2xl font-semibold text-center">Register</h2>
         {referredBy && walletAddress ? (
           <form onSubmit={handleSubmit} className="space-y-4">
-            <p className="text-sm text-white">
+            <p className="text-sm text-white break-words overflow-hidden">
               Wallet Address:{" "}
               <span className="font-semibold">{walletAddress}</span>
             </p>

@@ -70,7 +70,7 @@ const WalletDeposite = () => {
           <p class="text-sm font-semibold text-left text-white">My Investment:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">0</p>
+            <p className="text-yellow-500 font-bold text-2xl">${auth?.user?.totalInvestment || 0}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
@@ -89,7 +89,7 @@ const WalletDeposite = () => {
           <p class="text-sm font-semibold text-left text-white">Total Withdrawl:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">0</p>
+            <p className="text-yellow-500 font-bold text-2xl">$0</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
@@ -101,7 +101,7 @@ const WalletDeposite = () => {
           <p class="text-sm font-semibold text-left text-white">Balance:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">0</p>
+            <p className="text-yellow-500 font-bold text-2xl">${auth?.user?.earningWallet || 0}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Request Withdraw:</p>
@@ -130,9 +130,12 @@ const WalletDeposite = () => {
           </div>
 
           {/* <!-- Referral Link Input --> */}
-          <div class="bg-[#0b1122] border border-gray-600 rounded-md text-white px-4 py-2 mb-4 text-center">
-            {invitationLink}
-          </div>
+          <div className="bg-[#0b1122] border border-gray-600 rounded-md text-white px-4 py-2 mb-4 text-center whitespace-normal break-words">
+  {invitationLink}
+</div>
+
+
+
 
           {/* <!-- Buttons --> */}
           <div class="flex flex-col gap-2">

@@ -116,7 +116,10 @@ const Login = () => {
 
     return (
         <div className="login-container">
-      <button className="mt-4" onClick={() => {navigate(-1)}}> 🔙 </button>
+      <button className="mt-4" onClick={() => {navigate('/')}}> 🔙 </button>
+      <div className="flex w-[70%] m-auto mt-10  items-center">
+          <img className="w-18 m-auto" src="/images/xyz.png" alt="error" />
+        </div>
             <div className="login-card">
                 <h2>Login</h2>
                 <form onSubmit={handleSubmit}>
