@@ -234,7 +234,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">${auth?.user?.totalEarning}</p>
+            <p className="text-yellow-500 font-bold text-2xl">$ {parseFloat(auth?.user?.totalEarning).toFixed(2) || 0}</p>
           </div>
         </div>
 
@@ -244,7 +244,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">${auth?.user?.directBussiness || 0}</p>
+            <p className="text-yellow-500 font-bold text-2xl">${ parseFloat(auth?.user?.directBussiness).toFixed(2) || 0}</p>
           </div>
         </div>
 
@@ -254,7 +254,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className= "text-yellow-500 font-bold text-2xl" >${auth?.user?.teamBusiness || 0}</p>
+            <p className= "text-yellow-500 font-bold text-2xl" >${ parseFloat(auth?.user?.teamBusiness).toFixed(2) || 0}</p>
           </div>
         </div>
 
@@ -262,7 +262,7 @@ const WalletDetails = () => {
           <p class="text-sm font-semibold text-left text-white">My Team:</p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">{auth?.user?.teamSize.length || 0}</p>
+            <p className="text-yellow-500 font-bold text-2xl">{ auth?.user?.teamSize.length || 0}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
@@ -282,7 +282,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">${uplineTotal}</p>
+            <p className="text-yellow-500 font-bold text-2xl">${ parseFloat(uplineTotal).toFixed(2) || 0}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
@@ -310,7 +310,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">${f100Total}</p>
+            <p className="text-yellow-500 font-bold text-2xl">${ parseFloat(f100Total).toFixed(2) || 0}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
@@ -331,7 +331,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">${backTotal}</p>
+            <p className="text-yellow-500 font-bold text-2xl">${ parseFloat(backTotal).toFixed(2) || 0}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
@@ -352,7 +352,7 @@ const WalletDetails = () => {
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">${magicTotal}</p>
+            <p className="text-yellow-500 font-bold text-2xl">${ parseFloat(magicTotal).toFixed(2) || 0}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
