@@ -123,10 +123,10 @@ function Recharge() {
         try {
           let res = await axios.post(
             `${process.env.REACT_APP_API_URL}/user/recharge/${
-              auth?.user?._id
+              auth?.user?.referralCode
             }/${transferredAmount}`
           );
-          console.log(res.data.message);
+          console.log(res.data.data);
         } catch (error) {
           console.log(error.message);
         }
