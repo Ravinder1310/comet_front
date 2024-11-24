@@ -14,6 +14,8 @@ const WalletDetails = () => {
   const [backTotal, setBackTotal] = useState(0);
   const [magicTotal, setMagicTotal] = useState(0);
   const [uplineTotal, setUplineTotal] = useState(0);
+  const [withdrawlUplineTotal, setWithdrawlUplineTotal] = useState(0);
+  const [globalTotal, setGlobalTotal] = useState(0);
   
 
   const generateInvitationLink = () => {
@@ -155,6 +157,52 @@ const WalletDetails = () => {
 
 
 
+
+
+  const getWithdrawlUplineIncomeHistory = async () => {
+    try {
+      let res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/all-incomes/withdrawl-upline/${
+          auth?.user?._id
+        }`
+      );
+      // console.log(res);
+      let up = 0;
+
+      for(let i=0;i<res.data.data.length;i++){
+        up += res.data.data[i].amount;
+      }
+
+      setWithdrawlUplineTotal(up);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+
+
+  const getGlobalIncomeHistory = async () => {
+    try {
+      let res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/all-incomes/global/${
+          auth?.user?._id
+        }`
+      );
+      // console.log(res);
+      let global = 0;
+
+      for(let i=0;i<res.data.data.length;i++){
+        global += res.data.data[i].amount;
+      }
+
+      setGlobalTotal(global);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+
+
   useEffect(() => {
     // let userSign = localStorage.getItem("user");
     // setUser(userSign);
@@ -165,6 +213,8 @@ const WalletDetails = () => {
     getMagicIncomeHistory();
     getUplineIncomeHistory();
     generateInvitationLink();
+    getWithdrawlUplineIncomeHistory();
+    getGlobalIncomeHistory();
   }, []);
 
   const handleLogout = () => {
@@ -265,7 +315,7 @@ const WalletDetails = () => {
             <p className="text-yellow-500 font-bold text-2xl">{ auth?.user?.teamSize.length || 0}</p>
           </div>
           <hr className="mt-3" />
-          <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
+          <p class="text-sm  text-gray-400 text-left mt-3"> Click to View: </p>
           <button
            onClick={() => {
             navigate("/users/user/myteam");
@@ -384,25 +434,48 @@ const WalletDetails = () => {
             VIEW HISTORY
           </button>
         </div> */}
-        {/* <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
           <p class="text-sm font-semibold text-left text-white">
             Upline Bonus:
           </p>
           <div className="flex mt-4 gap-2 items-center">
             <img src="/images/pl.png" className="w-8" alt="error" />
-            <p className="text-yellow-500 font-bold text-2xl">${uplineTotal}</p>
+            <p className="text-yellow-500 font-bold text-2xl">${ parseFloat(withdrawlUplineTotal).toFixed(2) || 0}</p>
           </div>
           <hr className="mt-3" />
           <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
           <button
             onClick={() => {
-              navigate("/users/user/upline-income");
+              navigate("/users/user/withdrawl-upline-income");
             }}
             class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full"
           >
             VIEW HISTORY
           </button>
-        </div> */}
+        </div>
+
+
+        <div class=" bg-slate-800 p-4 border-l-4 border-yellow-500">
+          <p class="text-sm font-semibold text-left text-white">
+            Global Income :
+          </p>
+          <div className="flex mt-4 gap-2 items-center">
+            <img src="/images/pl.png" className="w-8" alt="error" />
+            <p className="text-yellow-500 font-bold text-2xl">${ parseFloat(globalTotal).toFixed(2) || 0}</p>
+          </div>
+          <hr className="mt-3" />
+          <p class="text-sm  text-gray-400 text-left mt-3">Click to View:</p>
+          <button
+            onClick={() => {
+              navigate("/users/user/global-income");
+            }}
+            class="mt-2 border-b-4 border-green-500 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-full w-full"
+          >
+            VIEW HISTORY
+          </button>
+        </div>
+
+
 
         <div class="bg-[#161c2d] text-white rounded-lg shadow-lg w-[90%] mx-auto mt-6">
           {/* <!-- Referral Link Header --> */}

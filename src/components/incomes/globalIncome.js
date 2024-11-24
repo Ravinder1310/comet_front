@@ -1,75 +1,77 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect, useState } from "react";
 // import { useSelector } from "react-redux";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "./context/auth";
+import { useAuth } from "../context/auth";
+import axios from "axios";
 
-const WithdrawlHistory = () => {
+const GlobalIncome = () => {
 //   const { user } = useSelector((store) => store.auth);
-  const [withdrawlHistory, setWithdrawlHistory] = useState([]);
-  const [auth, setAuth] = useAuth()
+  const [globalIncomeHistory, setGlobalIncomeHistory] = useState([]);
   const navigate = useNavigate();
+  const [auth, setAuth] = useAuth();
+  
 
-  const getWithdrawlHistory = async () => {
+
+
+  const getGlobalIncomeHistory = async () => {
     try {
       let res = await axios.get(
-        `${process.env.REACT_APP_API_URL}/user/withdrawl-history/${
+        `${process.env.REACT_APP_API_URL}/all-incomes/global/${
           auth?.user?._id
         }`
       );
       console.log(res.data.data);
-      setWithdrawlHistory(res.data.data);
+      setGlobalIncomeHistory(res.data.data);
     } catch (error) {
       console.log(error.message);
     }
   };
 
   useEffect(() => {
-    getWithdrawlHistory();
+    getGlobalIncomeHistory();
   }, []);
 
   return (
-    <div className="p-4 pb-28 bg-[#161c2d] min-h-screen text-white">
-      <button className="" onClick={() => {navigate(-1)}}> 🔙 </button>
-      <h1 className="text-center text-2xl font-mono mt-14">Withdrawl History</h1>
-      <div className="teamTable mx-auto mt-4 text-black w-full">
+    <div className="p-4 bg-[#161c2d] min-h-screen text-whitepb-28">
+         <button className="" onClick={() => {navigate(-1)}}> 🔙 </button>
+      <h1 className="text-center text-2xl font-mono text-white mt-10">Global Income History</h1>
+      <div className="teamTable mx-auto mt-8 text-black w-full">
         <div className="overflow-x-auto bg-gray-600 shadow-lg shadow-white p-2 rounded-lg">
           <table className="w-full table-fixed font-medium bg-gray-600 p-2 text-white">
             <thead>
               <tr className="headTeamTH text-center font-medium text-sm text-white p-2">
                 <th className="w-20 whitespace-nowrap p-2">Sr No.</th>
+                <th className="w-32 whitespace-nowrap p-2">From</th>
+                <th className="w-32 whitespace-nowrap p-2">Withdrawl</th>
                 <th className="w-32 whitespace-nowrap p-2">Amount</th>
-                <th className="w-32 whitespace-nowrap p-2">Deduction</th>
-                <th className="w-32 whitespace-nowrap p-2">Withdrawl Amount</th>
-                <th className="w-32 whitespace-nowrap p-2">Status</th>
                 {/* <th className="w-32 whitespace-nowrap p-2">Direct Business</th> */}
                 <th className="w-32 whitespace-nowrap p-2">Date</th>
               </tr>
             </thead>
             <tbody>
-              {withdrawlHistory.length !== 0 ? (
-                withdrawlHistory?.map((history, index) => (
+              {globalIncomeHistory?.length !== 0 ? (
+                globalIncomeHistory?.map((daily, index) => (
                   <tr
-                    className="thteamInvite border-b text-center border-gray-400 text-white"
-                    key={history._id}
+                    className="thteamInvite border-b text-center border-white text-white"
+                    key={daily._id}
                   >
                     <td className=" p-2">{index + 1}</td>
-                    <td className=" p-2">{parseFloat(history.amount).toFixed(2)}</td>
-                    <td className=" p-2">50 %</td>
+                    <td className=" p-2">{daily.from}</td>
+                    <td className=" p-2">$ {parseFloat(daily.withdrawl).toFixed(2)}</td>
                     <td className=" p-2">
-                      $ {parseFloat((history.amount) - (history.amount)*50/100).toFixed(2)}
+                      $ {parseFloat(daily.amount).toFixed(2)}
                     </td>
-                    <td className=" p-2">{history.status}</td>
                     <td className=" p-2">
-                      {moment(history.createdAt).format("YYYY-MM-DD")}
+                      {moment(daily.createdAt).format("YYYY-MM-DD")}
                     </td>
                   </tr>
                 ))
               ) : (
                 <tr className="thteamInvite border-b text-center border-gray-400 text-white">
                   <td colSpan="4" className="py-4 px-2 text-center">
-                    No Withdrawls yet
+                    No Global Income yet 
                   </td>
                 </tr>
               )}
@@ -81,4 +83,4 @@ const WithdrawlHistory = () => {
   );
 };
 
-export default WithdrawlHistory;
+export default GlobalIncome;

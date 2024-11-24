@@ -19,6 +19,8 @@ import ScrollToTop from './components/scrollTop';
 import PrivateRoute from './components/routes/privateRoute';
 import BnbKombat from './components/incomes/bnbKombat';
 import MyTeam from './components/myTeam/team';
+import WithdrawlUplineIncome from './components/incomes/withdrawlUpline';
+import GlobalIncome from './components/incomes/globalIncome';
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
       <Route path="user/magic-income" element={<MagicIncome />} />
       <Route path="user/airdrop-income" element={<DirectIncome />} />
       <Route path="user/upline-income" element={<UplineIncome />} />
+      <Route path="user/withdrawl-upline-income" element={<WithdrawlUplineIncome />} />
+      <Route path="user/global-income" element={<GlobalIncome />} />
       <Route path="user/withdrawl" element={<WithdrawlHistory />} />
       {/* <Route path="user/recharge" element={<RechargeHistory />} /> */}
       <Route path="user/myteam" element={<MyTeam />} />

@@ -259,7 +259,7 @@ function Recharge() {
         const accounts = await web3.eth.getAccounts();
         setAccount(accounts[0]);
         setStatus('Wallet connected');
-        fetchUserDetails();
+        // fetchUserDetails();
       } else {
         setStatus('MetaMask not found. Please install MetaMask.');
       }
@@ -268,14 +268,14 @@ function Recharge() {
     }
   };
 
-  const fetchUserDetails = async () => {
-    try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/user/${auth?.user?._id}`);
-      setBnbKombat(response.data.bnbKombat || 0);
-    } catch (error) {
-      console.error('Error fetching user details:', error.message);
-    }
-  };
+  // const fetchUserDetails = async () => {
+  //   try {
+  //     const response = await axios.get(`${process.env.REACT_APP_API_URL}/user/${auth?.user?._id}`);
+  //     setBnbKombat(response.data.bnbKombat || 0);
+  //   } catch (error) {
+  //     console.error('Error fetching user details:', error.message);
+  //   }
+  // };
 
   const calculatePayableAmount = (inputAmount) => {
     const total = parseFloat(inputAmount) || 0;
@@ -364,9 +364,9 @@ function Recharge() {
         <p className="text-yellow-500 mb-2">Payable Amount: {payableAmount} USDT</p>
         <button
           onClick={handleTransfer}
-          className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+          className="bg-green-500 text-white py-2 px-4 rounded font-semibold hover:bg-green-600"
         >
-          Transfer USDT
+          Deposite Now
         </button>
         {status && <p className="mt-4 text-xl font-bold text-yellow-500">{status}</p>}
       </div>
